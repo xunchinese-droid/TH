@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Ôn Tập HSK 4 - Bài 19</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        h2.teacher-name {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 0;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background-color: #f1f2f6;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #27ae60;
+        }
+        #result-box {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .comment {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .correct-answer {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .wrong-answer {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>BÀI TẬP TRẮC NGHIỆM ÔN TẬP HSK 4 - BÀI 19</h1>
+    <h2 class="teacher-name">Giáo viên: Trần Văn Huân</h2>
+
+    <form id="quiz-form">
+        <!-- PHẦN 1 -->
+        <div class="section-title">Phần 1: Dịch câu từ Trung sang Việt (5 câu)</div>
+        
+        <div class="question" id="q1-container">
+            <p>Câu 1: 没关系，不用道歉，谁都有粗心填错的时候。</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Không sao, không cần cảm ơn, ai cũng có lúc làm sai.</label>
+                <label><input type="radio" name="q1" value="B"> B. Không sao, không cần xin lỗi, ai cũng có lúc sơ ý điền sai.</label>
+                <label><input type="radio" name="q1" value="C"> C. Có sao đâu, không cần xin lỗi, ai cũng có lúc viết nhầm.</label>
+                <label><input type="radio" name="q1" value="D"> D. Không sao, cần phải xin lỗi, vì ai cũng có lúc điền sai.</label>
+            </div>
+        </div>
+
+        <div class="question" id="q2-container">
+            <p>Câu 2: 世界上没有免费的午餐。</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. Trên thế giới không có bữa trưa.</label>
+                <label><input type="radio" name="q2" value="B"> B. Thế giới này không có bữa tối miễn phí.</label>
+                <label><input type="radio" name="q2" value="C"> C. Trên đời không có bữa trưa nào miễn phí.</label>
+                <label><input type="radio" name="q2" value="D"> D. Không có bữa ăn nào miễn phí trên đời.</label>
+            </div>
+        </div>
+
+        <div class="question" id="q3-container">
+            <p>Câu 3: 看来今天吃不上羊肉饺子了。</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. Xem ra hôm nay không ăn được bánh chẻo thịt cừu rồi.</label>
+                <label><input type="radio" name="q3" value="B"> B. Xem ra hôm nay phải ăn bánh chẻo thịt cừu rồi.</label>
+                <label><input type="radio" name="q3" value="C"> C. Hôm nay chắc chắn sẽ ăn bánh chẻo thịt bò.</label>
+                <label><input type="radio" name="q3" value="D"> D. Xem ra hôm nay không được ăn bánh bao thịt cừu.</label>
+            </div>
+        </div>
+
+        <div class="question" id="q4-container">
+            <p>Câu 4: 生命在于运动。</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. Cuộc sống cần có thể thao.</label>
+                <label><input type="radio" name="q4" value="B"> B. Sinh mệnh nằm ở sự vận động.</label>
+                <label><input type="radio" name="q4" value="C"> C. Vận động giúp cuộc sống tốt hơn.</label>
+                <label><input type="radio" name="q4" value="D"> D. Cuộc đời là một môn thể thao.</label>
+            </div>
+        </div>
+
+        <div class="question" id="q5-container">
+            <p>Câu 5: 总的来说，这套房子他很满意。</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. Nói chung, anh ấy rất thích căn phòng này.</label>
+                <label><input type="radio" name="q5" value="B"> B. Tóm lại, anh ấy không hài lòng với ngôi nhà này.</label>
+                <label><input type="radio" name="q5" value="C"> C. Nói chung, anh ấy rất hài lòng với căn nhà này.</label>
+                <label><input type="radio" name="q5" value="D"> D. Cuối cùng, anh ấy đã mua căn nhà này.</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 2 -->
+        <div class="section-title">Phần 2: Dịch câu từ Việt sang Trung (5 câu)</div>
+        
+        <div class="question" id="q6-container">
+            <p>Câu 6: Vui lòng điền họ tên, giới tính, tuổi tác vào biểu mẫu.</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A. 请在表格上填好姓名、性别、年龄。</label>
+                <label><input type="radio" name="q6" value="B"> B. 请在表格上填好名字、性格、岁数。</label>
+                <label><input type="radio" name="q6" value="C"> C. 麻烦在表格上写姓名、性别、年。</label>
+                <label><input type="radio" name="q6" value="D"> D. 请在表格上写好姓名、男女、年龄。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q7-container">
+            <p>Câu 7: Cho hỏi, còn cần làm việc gì khác không?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A. 请问还需要做别的吗？</label>
+                <label><input type="radio" name="q7" value="B"> B. 请问还需要做别的事情吗？</label>
+                <label><input type="radio" name="q7" value="C"> C. 请问还要做什么事？</label>
+                <label><input type="radio" name="q7" value="D"> D. 请问你要做什么别的事吗？</label>
+            </div>
+        </div>
+
+        <div class="question" id="q8-container">
+            <p>Câu 8: Điện thoại của giám đốc Lý luôn báo bận.</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A. 李经理的电话一直占线。</label>
+                <label><input type="radio" name="q8" value="B"> B. 李经理的电话总是很忙。</label>
+                <label><input type="radio" name="q8" value="C"> C. 李经理的电话一直在打。</label>
+                <label><input type="radio" name="q8" value="D"> D. 李经理的手机一直没人听。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q9-container">
+            <p>Câu 9: Ở chỗ chúng tôi cấm hút thuốc.</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> A. 我们这里不要抽烟。</label>
+                <label><input type="radio" name="q9" value="B"> B. 我们这里禁止抽烟。</label>
+                <label><input type="radio" name="q9" value="C"> C. 我们这里停止吸烟。</label>
+                <label><input type="radio" name="q9" value="D"> D. 我们这里不准喝酒。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q10-container">
+            <p>Câu 10: Tôi quên mang kính rồi, nhìn không rõ.</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> A. 我没带眼镜了，看不清楚。</label>
+                <label><input type="radio" name="q10" value="B"> B. 我忘戴眼镜了，看不清楚。</label>
+                <label><input type="radio" name="q10" value="C"> C. 我忘记穿眼镜了，看不清楚。</label>
+                <label><input type="radio" name="q10" value="D"> D. 我没戴眼镜了，看不好。</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 3 -->
+        <div class="section-title">Phần 3: Sắp xếp đúng trật tự các câu (3 câu)</div>
+        
+        <div class="question" id="q11-container">
+            <p>Câu 11: Hãy chọn thứ tự đúng hợp logic:<br>
+            A: 每个人都有自己的生活<br>
+            B: 谁都要忙自己的事儿<br>
+            C: 所以不要总是去麻烦别人</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> A. ABC</label>
+                <label><input type="radio" name="q11" value="B"> B. ACB</label>
+                <label><input type="radio" name="q11" value="C"> C. BAC</label>
+                <label><input type="radio" name="q11" value="D"> D. CAB</label>
+            </div>
+        </div>
+
+        <div class="question" id="q12-container">
+            <p>Câu 12: Hãy chọn thứ tự đúng hợp logic:<br>
+            A: 今天终于吃上了<br>
+            B: 早就听说这个饭馆儿的菜特别好吃<br>
+            C: 可是每次来人都很多</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> A. BAC</label>
+                <label><input type="radio" name="q12" value="B"> B. BCA</label>
+                <label><input type="radio" name="q12" value="C"> C. ABC</label>
+                <label><input type="radio" name="q12" value="D"> D. CAB</label>
+            </div>
+        </div>
+
+        <div class="question" id="q13-container">
+            <p>Câu 13: Hãy chọn thứ tự đúng hợp logic:<br>
+            A: 他们的成功在于坚持不放弃<br>
+            B: 取得成功的人都经历过许多失败<br>
+            C: 并且在这个过程中不断努力</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> A. ABC</label>
+                <label><input type="radio" name="q13" value="B"> B. BCA</label>
+                <label><input type="radio" name="q13" value="C"> C. CAB</label>
+                <label><input type="radio" name="q13" value="D"> D. BAC</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 4 -->
+        <div class="section-title">Phần 4: Chọn từ thích hợp điền vào chỗ trống (5 câu)</div>
+        
+        <div class="question" id="q14-container">
+            <p>Câu 14: 请在表格上填好姓名、( ____ )、年龄、职业等。</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A. 打印</label>
+                <label><input type="radio" name="q14" value="B"> B. 性别</label>
+                <label><input type="radio" name="q14" value="C"> C. 功夫</label>
+                <label><input type="radio" name="q14" value="D"> D. 零钱</label>
+            </div>
+        </div>
+
+        <div class="question" id="q15-container">
+            <p>Câu 15: 这个小区太( ____ )了，我怕影响孩子学习和休息。</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A. 吵</label>
+                <label><input type="radio" name="q15" value="B"> B. 破</label>
+                <label><input type="radio" name="q15" value="C"> C. 危险</label>
+                <label><input type="radio" name="q15" value="D"> D. 咸</label>
+            </div>
+        </div>
+
+        <div class="question" id="q16-container">
+            <p>Câu 16: 很多地方都( ____ )抽烟。</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A. 允许</label>
+                <label><input type="radio" name="q16" value="B"> B. 禁止</label>
+                <label><input type="radio" name="q16" value="C"> C. 降落</label>
+                <label><input type="radio" name="q16" value="D"> D. 道歉</label>
+            </div>
+        </div>
+
+        <div class="question" id="q17-container">
+            <p>Câu 17: 我们一共四个人，麻烦你给我们找个安静点儿的( ____ )。</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A. 地址</label>
+                <label><input type="radio" name="q17" value="B"> B. 地点</label>
+                <label><input type="radio" name="q17" value="C"> C. 厨房</label>
+                <label><input type="radio" name="q17" value="D"> D. 座位</label>
+            </div>
+        </div>
+
+        <div class="question" id="q18-container">
+            <p>Câu 18: 我带的( ____ )应该够了。</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A. 包子</label>
+                <label><input type="radio" name="q18" value="B"> B. 眼镜</label>
+                <label><input type="radio" name="q18" value="C"> C. 零钱</label>
+                <label><input type="radio" name="q18" value="D"> D. 护照</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 5 -->
+        <div class="section-title">Phần 5: Sắp xếp từ thành câu (5 câu)</div>
+        
+        <div class="question" id="q19-container">
+            <p>Câu 19: 把 / 不小心 / 我 / 护照号码 / 填错 / 了</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A. 我把护照号码不小心填错了。</label>
+                <label><input type="radio" name="q19" value="B"> B. 我不小心把护照号码填错了。</label>
+                <label><input type="radio" name="q19" value="C"> C. 我不小心填错护照号码把了。</label>
+                <label><input type="radio" name="q19" value="D"> D. 把我不小心护照号码填错了。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q20-container">
+            <p>Câu 20: 衣服 / 你 / 脱下来 / 把</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A. 你脱下来把衣服。</label>
+                <label><input type="radio" name="q20" value="B"> B. 衣服把你脱下来。</label>
+                <label><input type="radio" name="q20" value="C"> C. 你把衣服脱下来。</label>
+                <label><input type="radio" name="q20" value="D"> D. 把你衣服脱下来。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q21-container">
+            <p>Câu 21: 实在 / 选 / 哪个 / 想不出来 / 该</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A. 实在该选哪个想不出来。</label>
+                <label><input type="radio" name="q21" value="B"> B. 想不出来实在该选哪个。</label>
+                <label><input type="radio" name="q21" value="C"> C. 该选哪个实在想不出来。</label>
+                <label><input type="radio" name="q21" value="D"> D. 实在想不出来该选哪个。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q22-container">
+            <p>Câu 22: 开始 / 慢慢 / 热起来 / 天气 / 已经</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> A. 天气已经开始慢慢热起来。</label>
+                <label><input type="radio" name="q22" value="B"> B. 慢慢热起来天气已经开始。</label>
+                <label><input type="radio" name="q22" value="C"> C. 天气慢慢已经开始热起来。</label>
+                <label><input type="radio" name="q22" value="D"> D. 开始天气已经慢慢热起来。</label>
+            </div>
+        </div>
+
+        <div class="question" id="q23-container">
+            <p>Câu 23: 广告上 / 交通 / 说 / 房子 / 方便</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> A. 广告上房子说交通方便。</label>
+                <label><input type="radio" name="q23" value="B"> B. 说广告上房子交通方便。</label>
+                <label><input type="radio" name="q23" value="C"> C. 广告上说房子交通方便。</label>
+                <label><input type="radio" name="q23" value="D"> D. 房子说广告上交通方便。</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="submitQuiz()">NỘP BÀI & CHẤM ĐIỂM</button>
+    </form>
+
+    <div id="result-box">
+        <div class="score" id="score-display"></div>
+        <div class="comment" id="comment-display"></div>
+    </div>
+</div>
+
+<script>
+    const correctAnswers = {
+        q1: 'B', q2: 'C', q3: 'A', q4: 'B', q5: 'C',
+        q6: 'A', q7: 'B', q8: 'A', q9: 'B', q10: 'B',
+        q11: 'A', q12: 'B', q13: 'B',
+        q14: 'B', q15: 'A', q16: 'B', q17: 'D', q18: 'C',
+        q19: 'B', q20: 'C', q21: 'D', q22: 'A', q23: 'C'
+    };
+
+    function submitQuiz() {
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length;
+        const form = document.getElementById('quiz-form');
+
+        // Check each question
+        for (let [questionName, correctAnswer] of Object.entries(correctAnswers)) {
+            const selectedOption = form.querySelector(`input[name="${questionName}"]:checked`);
+            const container = document.getElementById(`${questionName}-container`);
+            
+            // Remove previous highlights
+            const labels = container.querySelectorAll('label');
+            labels.forEach(label => {
+                label.style.color = '';
+                label.style.fontWeight = 'normal';
+            });
+
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswer) {
+                    score++;
+                    selectedOption.parentElement.style.color = '#27ae60';
+                    selectedOption.parentElement.style.fontWeight = 'bold';
+                } else {
+                    selectedOption.parentElement.style.color = '#e74c3c';
+                    selectedOption.parentElement.style.fontWeight = 'bold';
+                    // Highlight correct answer as well
+                    const correctLabel = container.querySelector(`input[value="${correctAnswer}"]`).parentElement;
+                    correctLabel.style.color = '#27ae60';
+                    correctLabel.style.fontWeight = 'bold';
+                }
+            } else {
+                // If not answered, just highlight the correct one
+                const correctLabel = container.querySelector(`input[value="${correctAnswer}"]`).parentElement;
+                correctLabel.style.color = '#27ae60';
+                correctLabel.style.fontWeight = 'bold';
+            }
+        }
+
+        // Display Result
+        const resultBox = document.getElementById('result-box');
+        const scoreDisplay = document.getElementById('score-display');
+        const commentDisplay = document.getElementById('comment-display');
+
+        resultBox.style.display = 'block';
+        scoreDisplay.innerHTML = `Điểm của bạn: ${score} / ${totalQuestions}`;
+
+        // Feedback Logic
+        const percentage = (score / totalQuestions) * 100;
+        if (percentage === 100) {
+            resultBox.style.backgroundColor = '#d4edda';
+            resultBox.style.color = '#155724';
+            commentDisplay.innerHTML = "🎉 Xuất sắc! Bạn đã nắm rất vững toàn bộ kiến thức bài 19.";
+        } else if (percentage >= 80) {
+            resultBox.style.backgroundColor = '#d1ecf1';
+            resultBox.style.color = '#0c5460';
+            commentDisplay.innerHTML = "🌟 Rất tốt! Kiến thức của bạn rất vững, hãy tiếp tục phát huy nhé.";
+        } else if (percentage >= 50) {
+            resultBox.style.backgroundColor = '#fff3cd';
+            resultBox.style.color = '#856404';
+            commentDisplay.innerHTML = "👍 Khá tốt. Bạn đã hiểu bài, nhưng cần ôn tập thêm một số cấu trúc và từ vựng bị sai.";
+        } else {
+            resultBox.style.backgroundColor = '#f8d7da';
+            resultBox.style.color = '#721c24';
+            commentDisplay.innerHTML = "💪 Cố lên! Bạn cần xem lại bài giảng và tài liệu thật kỹ rồi làm lại bài nhé.";
+        }
+
+        // Scroll to result
+        resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

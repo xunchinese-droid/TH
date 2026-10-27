@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Ôn Tập HSK 4 - Bài 18 | Giáo Viên: Trần Văn Huân</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #eef2f5;
+            --text-color: #333;
+            --correct-color: #28a745;
+            --wrong-color: #dc3545;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        header p {
+            margin: 0;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            border-radius: 6px;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background-color: #e2e8f0;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 30px;
+        }
+        .btn-submit:hover {
+            background-color: #004494;
+        }
+        #result-container {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .score {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feedback {
+            font-size: 18px;
+        }
+        .correct-ans {
+            background-color: #d4edda !important;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .wrong-ans {
+            background-color: #f8d7da !important;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BÀI TẬP TRẮC NGHIỆM HSK 4 - BÀI 18</h1>
+    <p>Chủ đề: 科技与世界 (Khoa học công nghệ và thế giới)</p>
+    <p>Giáo viên biên soạn: <strong>Trần Văn Huân</strong></p>
+</header>
+
+<div class="container">
+    <form id="quizForm">
+        
+        <!-- PHẦN 1 -->
+        <h2 class="section-title">Phần 1: Dịch câu từ Trung sang Việt (Chọn đáp án chính xác nhất)</h2>
+        
+        <div class="question-block" id="qb-q1">
+            <div class="question-text">Câu 1: 电脑和互联网技术的发展使学生们的学习方式发生了很多变化。</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Sự phát triển của máy tính và mạng internet đã làm cho phương thức học tập của học sinh thay đổi rất nhiều.</label>
+                <label><input type="radio" name="q1" value="B"> B. Máy tính và mạng internet phát triển làm học sinh không muốn học nữa.</label>
+                <label><input type="radio" name="q1" value="C"> C. Phương thức học tập của học sinh thay đổi do sử dụng máy tính quá nhiều.</label>
+                <label><input type="radio" name="q1" value="D"> D. Máy tính và công nghệ mạng internet giúp học sinh học tập tốt hơn.</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q2">
+            <div class="question-text">Câu 2: 现在人们都把地球叫作“地球村”。</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. Bây giờ mọi người đều thích sống ở ngôi làng trái đất.</label>
+                <label><input type="radio" name="q2" value="B"> B. Bây giờ mọi người đều gọi trái đất là "ngôi làng trái đất".</label>
+                <label><input type="radio" name="q2" value="C"> C. Trái đất bây giờ giống như một ngôi làng nhỏ.</label>
+                <label><input type="radio" name="q2" value="D"> D. Mọi người hiện nay đều chuyển đến làng trái đất sinh sống.</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q3">
+            <div class="question-text">Câu 3: 这本书的语言简单易懂，一定能增长孩子的科学知识。</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. Sách này rất đơn giản, trẻ em đọc để biết thêm kiến thức.</label>
+                <label><input type="radio" name="q3" value="B"> B. Cuốn sách này tuy đơn giản nhưng kiến thức khoa học rất nhiều.</label>
+                <label><input type="radio" name="q3" value="C"> C. Ngôn ngữ của cuốn sách này đơn giản dễ hiểu, nhất định có thể tăng cường kiến thức khoa học cho trẻ.</label>
+                <label><input type="radio" name="q3" value="D"> D. Trẻ em đọc sách này sẽ hiểu được ngôn ngữ khoa học.</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q4">
+            <div class="question-text">Câu 4: 很多人认为做梦是上天要告诉他们将来会发生的一些事情。</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. Rất nhiều người cho rằng nằm mơ là ông trời muốn báo cho họ biết những việc sẽ xảy ra trong tương lai.</label>
+                <label><input type="radio" name="q4" value="B"> B. Nhiều người nghĩ nằm mơ là do ban ngày làm việc quá mệt mỏi.</label>
+                <label><input type="radio" name="q4" value="C"> C. Rất nhiều người cho rằng tương lai sẽ xảy ra những việc giống như trong mơ.</label>
+                <label><input type="radio" name="q4" value="D"> D. Nằm mơ là cách ông trời nói chuyện với con người vào ban đêm.</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q5">
+            <div class="question-text">Câu 5: 只要用手机地图查一下地址，马上就能知道怎么去那个地点。</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. Dùng điện thoại tra bản đồ rất nhanh biết được địa chỉ.</label>
+                <label><input type="radio" name="q5" value="B"> B. Chỉ cần dùng bản đồ điện thoại tra địa chỉ một chút, lập tức sẽ biết làm sao đến địa điểm đó.</label>
+                <label><input type="radio" name="q5" value="C"> C. Chỉ cần tra bản đồ trên điện thoại là có thể đi đến mọi nơi.</label>
+                <label><input type="radio" name="q5" value="D"> D. Điện thoại có bản đồ giúp chúng ta tìm địa chỉ dễ dàng.</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 2 -->
+        <h2 class="section-title">Phần 2: Dịch câu từ Việt sang Trung</h2>
+        
+        <div class="question-block" id="qb-q6">
+            <div class="question-text">Câu 6: Một người có nghiêm khắc với bản thân hay không, có ảnh hưởng quan trọng đến việc người đó cách thành công bao xa.</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A. 一个人对自己要求严格，对他离成功的远近有着重要影响。</label>
+                <label><input type="radio" name="q6" value="B"> B. 一个人对自己要求是否严格，他离成功很近。</label>
+                <label><input type="radio" name="q6" value="C"> C. 一个人对自己要求是否严格，对于他离成功的远近有着重要的影响。</label>
+                <label><input type="radio" name="q6" value="D"> D. 对自己要求严格的人，一定能取得成功。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q7">
+            <div class="question-text">Câu 7: Cuốn sách này giới thiệu các loại kiến thức khoa học, bao gồm trái đất, động vật, thực vật...</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A. 这本书介绍了各种科学知识，包括地球、动物、植物……</label>
+                <label><input type="radio" name="q7" value="B"> B. 这本书有很多科学知识，比如地球、动物、植物……</label>
+                <label><input type="radio" name="q7" value="C"> C. 各种科学知识在这本书里，包括地球、动物、植物……</label>
+                <label><input type="radio" name="q7" value="D"> D. 这本书介绍地球、动物、植物的科学知识。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q8">
+            <div class="question-text">Câu 8: Ngày nay càng ngày càng có nhiều học sinh thích viết nhật ký trên mạng.</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A. 现在的学生越来越喜欢上网写日记。</label>
+                <label><input type="radio" name="q8" value="B"> B. 现在越来越多的学生喜欢在网上写日记。</label>
+                <label><input type="radio" name="q8" value="C"> C. 在网上写日记的学生现在越来越多。</label>
+                <label><input type="radio" name="q8" value="D"> D. 越来越多学生现在上网写日记。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q9">
+            <div class="question-text">Câu 9: Ngoài ra, bạn còn có thể dùng nó để nghe nhạc, xem phim, chơi game...</div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> A. 除了这个，你能用它听音乐、看电影、玩儿游戏……</label>
+                <label><input type="radio" name="q9" value="B"> B. 另外，你可以听音乐、看电影、玩儿游戏用它……</label>
+                <label><input type="radio" name="q9" value="C"> C. 还有，你用它听音乐、看电影、玩儿游戏……</label>
+                <label><input type="radio" name="q9" value="D"> D. 除此以外，你还可以用它来听音乐、看电影、玩儿游戏……</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q10">
+            <div class="question-text">Câu 10: Cứ đến mùa thu, khắp núi đều là lá đỏ, phong cảnh đặc biệt đẹp.</div>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> A. 秋天到了，山上的红叶特别漂亮。</label>
+                <label><input type="radio" name="q10" value="B"> B. 每到秋天，满山都是红叶，风景特别漂亮。</label>
+                <label><input type="radio" name="q10" value="C"> C. 每到秋天，红叶满山，特别漂亮。</label>
+                <label><input type="radio" name="q10" value="D"> D. 满山都是红叶，秋天的风景特别漂亮。</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 3 -->
+        <h2 class="section-title">Phần 3: Sắp xếp đúng trật tự các câu thành đoạn văn hoàn chỉnh</h2>
+        
+        <div class="question-block" id="qb-q11">
+            <div class="question-text">Câu 11: <br>A: 除此之外，服务质量也非常重要<br>B: 你了解顾客的实际需要十分重要<br>C: 买东西时，顾客当然会考虑它的质量和价格</div>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> A. C - A - B</label>
+                <label><input type="radio" name="q11" value="B"> B. B - C - A</label>
+                <label><input type="radio" name="q11" value="C"> C. A - B - C</label>
+                <label><input type="radio" name="q11" value="D"> D. C - B - A</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q12">
+            <div class="question-text">Câu 12: <br>A: 突然开过来一辆车，非常危险<br>B: 我昨天晚上做了一个特别奇怪的梦<br>C: 梦到自己正在一座桥上走，走着走着</div>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> A. A - B - C</label>
+                <label><input type="radio" name="q12" value="B"> B. B - C - A</label>
+                <label><input type="radio" name="q12" value="C"> C. C - A - B</label>
+                <label><input type="radio" name="q12" value="D"> D. B - A - C</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q13">
+            <div class="question-text">Câu 13: <br>A: 连生活方式也发生了很大改变<br>B: 电脑和互联网技术的发展<br>C: 不仅使学习方式发生了变化</div>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> A. C - B - A</label>
+                <label><input type="radio" name="q13" value="B"> B. B - A - C</label>
+                <label><input type="radio" name="q13" value="C"> C. B - C - A</label>
+                <label><input type="radio" name="q13" value="D"> D. A - C - B</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 4 -->
+        <h2 class="section-title">Phần 4: Chọn từ thích hợp điền vào chỗ trống</h2>
+        
+        <div class="question-block" id="qb-q14">
+            <div class="question-text">Câu 14: 无论对自己还是对其他人来说，喝完酒开车都是极其_________的。</div>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A. 危险 (wēixiǎn - nguy hiểm)</label>
+                <label><input type="radio" name="q14" value="B"> B. 安全 (ānquán - an toàn)</label>
+                <label><input type="radio" name="q14" value="C"> C. 咸 (xián - mặn)</label>
+                <label><input type="radio" name="q14" value="D"> D. 接着 (jiēzhe - tiếp theo)</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q15">
+            <div class="question-text">Câu 15: 北京有一_______山，叫香山，非常有名。</div>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A. 条 (tiáo)</label>
+                <label><input type="radio" name="q15" value="B"> B. 座 (zuò)</label>
+                <label><input type="radio" name="q15" value="C"> C. 个 (gè)</label>
+                <label><input type="radio" name="q15" value="D"> D. 把 (bǎ)</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q16">
+            <div class="question-text">Câu 16: 有些人直接拿自己的生日做银行卡或信用卡的_________。</div>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A. 信息 (xìnxī - thông tin)</label>
+                <label><input type="radio" name="q16" value="B"> B. 网站 (wǎngzhàn - trang web)</label>
+                <label><input type="radio" name="q16" value="C"> C. 密码 (mìmǎ - mật mã)</label>
+                <label><input type="radio" name="q16" value="D"> D. 邮局 (yóujú - bưu điện)</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q17">
+            <div class="question-text">Câu 17: 我怎么觉得咱俩好像_________了？</div>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A. 降落 (jiàngluò - hạ cánh)</label>
+                <label><input type="radio" name="q17" value="B"> B. 迷路 (mílù - lạc đường)</label>
+                <label><input type="radio" name="q17" value="C"> C. 付款 (fùkuǎn - thanh toán)</label>
+                <label><input type="radio" name="q17" value="D"> D. 排队 (páiduì - xếp hàng)</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q18">
+            <div class="question-text">Câu 18: 饺子很香，不过鸡蛋汤稍微有点儿________。</div>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A. 甜 (tián - ngọt)</label>
+                <label><input type="radio" name="q18" value="B"> B. 辣 (là - cay)</label>
+                <label><input type="radio" name="q18" value="C"> C. 苦 (kǔ - đắng)</label>
+                <label><input type="radio" name="q18" value="D"> D. 咸 (xián - mặn)</label>
+            </div>
+        </div>
+
+        <!-- PHẦN 5 -->
+        <h2 class="section-title">Phần 5: Sắp xếp các từ thành câu hoàn chỉnh</h2>
+        
+        <div class="question-block" id="qb-q19">
+            <div class="question-text">Câu 19: 发生 / 很大的 / 改变 / 生活方式 / 了</div>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A. 生活方式发生了很大的改变。</label>
+                <label><input type="radio" name="q19" value="B"> B. 改变了很大的生活方式发生。</label>
+                <label><input type="radio" name="q19" value="C"> C. 很大的生活方式发生了改变。</label>
+                <label><input type="radio" name="q19" value="D"> D. 发生改变了很大的生活方式。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q20">
+            <div class="question-text">Câu 20: 越来越 / 现代人 / 离不开 / 手机 / 了</div>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A. 手机越来越离不开现代人了。</label>
+                <label><input type="radio" name="q20" value="B"> B. 越来越现代人离不开手机了。</label>
+                <label><input type="radio" name="q20" value="C"> C. 现代人越来越离不开手机了。</label>
+                <label><input type="radio" name="q20" value="D"> D. 现代人离不开手机越来越了。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q21">
+            <div class="question-text">Câu 21: 地球 / 叫作 / 人们 / 地球村 / 把</div>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A. 地球把人们叫作地球村。</label>
+                <label><input type="radio" name="q21" value="B"> B. 人们把地球叫作地球村。</label>
+                <label><input type="radio" name="q21" value="C"> C. 人们把地球村叫作地球。</label>
+                <label><input type="radio" name="q21" value="D"> D. 地球村把地球叫作人们。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q22">
+            <div class="question-text">Câu 22: 每天 / 对着 / 实在 / 电脑 / 眼睛 / 受不了</div>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> A. 眼睛每天对着电脑，受不了实在。</label>
+                <label><input type="radio" name="q22" value="B"> B. 每天对着眼睛，电脑实在受不了。</label>
+                <label><input type="radio" name="q22" value="C"> C. 实在受不了，每天眼睛对着电脑。</label>
+                <label><input type="radio" name="q22" value="D"> D. 每天对着电脑，眼睛实在受不了。</label>
+            </div>
+        </div>
+
+        <div class="question-block" id="qb-q23">
+            <div class="question-text">Câu 23: 得到了 / 只有 / 允许 / 别人 / 看到 / 才能</div>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> A. 别人只有得到了，允许才能看到。</label>
+                <label><input type="radio" name="q23" value="B"> B. 只有得到了允许，别人才能看到。</label>
+                <label><input type="radio" name="q23" value="C"> C. 才能看到别人，只有得到了允许。</label>
+                <label><input type="radio" name="q23" value="D"> D. 只有看到别人，才能得到了允许。</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="submitQuiz()">NỘP BÀI & XEM KẾT QUẢ</button>
+    </form>
+
+    <div id="result-container">
+        <div class="score" id="score-text"></div>
+        <div class="feedback" id="feedback-text"></div>
+    </div>
+</div>
+
+<script>
+    const correctAnswers = {
+        q1: 'A', q2: 'B', q3: 'C', q4: 'A', q5: 'B', 
+        q6: 'C', q7: 'A', q8: 'B', q9: 'D', q10: 'B', 
+        q11: 'A', q12: 'B', q13: 'C', 
+        q14: 'A', q15: 'B', q16: 'C', q17: 'B', q18: 'D', 
+        q19: 'A', q20: 'C', q21: 'B', q22: 'D', q23: 'B'
+    };
+
+    function submitQuiz() {
+        let score = 0;
+        let totalQuestions = Object.keys(correctAnswers).length;
+
+        // Reset previous styling
+        document.querySelectorAll('label').forEach(label => {
+            label.classList.remove('correct-ans', 'wrong-ans');
+        });
+
+        // Check answers
+        for (let [question, correctAnswer] of Object.entries(correctAnswers)) {
+            const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+            
+            // Highlight correct answer anyway
+            const correctLabel = document.querySelector(`input[name="${question}"][value="${correctAnswer}"]`).parentElement;
+            correctLabel.classList.add('correct-ans');
+
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswer) {
+                    score++;
+                } else {
+                    selectedOption.parentElement.classList.add('wrong-ans');
+                }
+            }
+        }
+
+        // Calculate 10-point scale
+        let score10 = ((score / totalQuestions) * 10).toFixed(1);
+
+        // Display Result
+        const resultContainer = document.getElementById('result-container');
+        const scoreText = document.getElementById('score-text');
+        const feedbackText = document.getElementById('feedback-text');
+
+        resultContainer.style.display = 'block';
+        scoreText.innerHTML = `Bạn đạt: ${score} / ${totalQuestions} câu<br>Điểm hệ 10: ${score10} điểm`;
+
+        // Feedback Logic
+        if (score10 >= 9) {
+            resultContainer.style.backgroundColor = '#d4edda';
+            resultContainer.style.color = '#155724';
+            feedbackText.innerHTML = "<strong>Nhận xét từ thầy Huân:</strong> Xuất sắc! Bạn nắm bài rất vững, ngữ pháp và từ vựng đều tuyệt vời. Hãy tiếp tục phát huy nhé!";
+        } else if (score10 >= 7) {
+            resultContainer.style.backgroundColor = '#cce5ff';
+            resultContainer.style.color = '#004085';
+            feedbackText.innerHTML = "<strong>Nhận xét từ thầy Huân:</strong> Khá tốt! Bạn đã hiểu bài tương đối rõ. Hãy xem lại những câu làm sai để củng cố thêm ngữ pháp nhé.";
+        } else if (score10 >= 5) {
+            resultContainer.style.backgroundColor = '#fff3cd';
+            resultContainer.style.color = '#856404';
+            feedbackText.innerHTML = "<strong>Nhận xét từ thầy Huân:</strong> Mức độ trung bình. Bạn cần ôn tập lại từ vựng và cấu trúc ngữ pháp (đặc biệt là câu chữ 把 và cách sắp xếp câu) của bài 18 nhiều hơn nữa.";
+        } else {
+            resultContainer.style.backgroundColor = '#f8d7da';
+            resultContainer.style.color = '#721c24';
+            feedbackText.innerHTML = "<strong>Nhận xét từ thầy Huân:</strong> Bạn cần cố gắng rất nhiều! Hãy mở lại giáo trình HSK 4 Bài 18, học kỹ lại từ mới và điểm ngữ pháp trước khi làm lại bài nhé.";
+        }
+        
+        // Scroll to bottom
+        resultContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

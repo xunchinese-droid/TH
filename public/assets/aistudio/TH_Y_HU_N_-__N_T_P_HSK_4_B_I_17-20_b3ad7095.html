@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THẦY HUÂN - ÔN TẬP HSK 4 BÀI 17-20</title>
+<script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.18.2/dist/index.js"></script>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1c2333;--mu:#667;--pr:#c0392b;--bd:#dde1ea;--ok:#1e8e4e;--okb:#e3f6ea;--no:#c62828;--nob:#fde8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121620;--card:#1b2130;--tx:#e8ebf3;--mu:#98a;--pr:#ff7a6b;--bd:#2f3748;--okb:#143323;--nob:#3a1b1b;--ok:#4cd68a;--no:#ff8a8a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+.w{max-width:820px;margin:0 auto;padding:16px}
+h1{text-align:center;color:var(--pr);font-size:1.5rem;margin:8px 0}
+.sub{text-align:center;color:var(--mu);margin-bottom:14px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:12px 0}
+input[type=text]{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font-size:1rem;box-sizing:border-box;margin:4px 0 10px}
+button{background:var(--pr);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.g{background:transparent;color:var(--pr);border:1px solid var(--pr)}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:8px 12px;margin:8px 0}
+.q{margin:14px 0;padding-bottom:12px;border-bottom:1px dashed var(--bd)}
+.st{white-space:pre-wrap;font-weight:600;font-size:1.05rem}
+.o{display:block;margin:6px 0;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;cursor:pointer}
+.o input{margin-right:8px}
+.o.ok{background:var(--okb);border-color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no)}
+.an{color:var(--ok);font-weight:600;margin-top:4px}
+.hv{font-size:.92rem;color:var(--mu);background:var(--bg);border-left:3px solid var(--pr);border-radius:6px;padding:6px 10px;margin-bottom:6px}
+h2{font-size:1.1rem;color:var(--pr);margin:0 0 4px}
+rt{font-size:.55em;font-weight:400;color:var(--mu)}
+.big{font-size:2.4rem;font-weight:700;text-align:center}
+table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid var(--bd);padding:6px;text-align:left}
+.hide{display:none}
+label.t{display:flex;align-items:center;gap:6px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="w">
+<h1>THẦY HUÂN - ÔN TẬP HSK 4 BÀI 17-20</h1>
+<div class="sub">75 câu trắc nghiệm · 6 phần · Thang điểm 10 · Đạt từ 7 điểm mới xem đáp án</div>
+
+<div id="intro" class="c">
+<b>Họ và tên học viên</b><input type="text" id="nm" placeholder="Nhập họ và tên">
+<b>Lớp</b><input type="text" id="cl" placeholder="Nhập lớp">
+<p style="color:var(--mu);margin:4px 0 12px">Lưu ý: chỉ được nộp bài sau khi đủ 45 phút. Dưới 7 điểm bạn phải làm lại và sẽ chưa được xem đáp án.</p>
+<button id="go">Bắt đầu làm bài</button>
+</div>
+
+<div id="main" class="hide">
+<div id="bar"><span id="who"></span><b id="tm">45:00</b><label class="t"><input type="checkbox" id="py"> Bật pinyin</label></div>
+<div id="qs"></div>
+<div class="c" style="text-align:center"><button id="sub" disabled>Nộp bài</button><div id="hint" style="color:var(--mu);margin-top:6px"></div></div>
+<div id="res" class="c hide"></div>
+</div>
+</div>
+<script>
+const S=[
+["Phần 1: Điền từ thích hợp vào chỗ trống",[
+"下完雨后，气温降低了很多，天气变得越来越（ ）了。|热闹|凉快|暖和|严格",
+"六一儿童节那天，许多父母带着孩子去动物园，入口处（ ）的人很多，热闹极了。|报名|排队|参观|排列",
+"刚才我听机场的（ ）说，因为下大雨，去北京的航班推迟起飞了。|广播|网站|信息|广告",
+"这件衣服虽然很便宜，但是质量（ ）是不错。|仍然|究竟|倒|是否",
+"你的这只大黑狗毛真漂亮，而且这么聪明，每次见了都想（ ）一抱它。|抬|抓|举|抱",
+"耐心地一遍一遍地教小狗，使它熟悉，然后它就会（ ）按照你的要求做了。|严格|难受|活泼|礼貌",
+"狗能听懂人的话，明白人的心情。在你心里（ ）的时候，它会一直陪着你。|激动|失望|难受|可怜",
+"上个月我去了（ ）北京动物园，那里约有500多种动物。|场|趟|座|棵",
+"不仅社会上的人与人之间有竞争，森林里的各种植物也会为了阳光、空气和水而（ ）。|竞争|对话|交流|排列",
+"就算在几公里深的海底也（ ）能看到东西，许多鱼会发出各种颜色的亮光。|接着|仍然|倒|是否",
+"有一本书叫《新十万个为什么》，现在卖得非常（ ），书里的内容都是儿童想知道的科学知识。|辣|香|火|咸",
+"不过女儿这么小，这本书我不知道她（ ）能读懂。|是否|究竟|仍然|接着",
+"天天对着电脑看，眼睛实在（ ），你应该起来活动活动。|来不及|受不了|吃不上|想不出来",
+"可以给网上的日记加密码，那样只有得到了（ ），别人才能看到。|道歉|祝贺|允许|原谅",
+"我梦到自己正在一座桥上走，突然开过来一辆车，非常危险，（ ）又梦见我跟警察一起抓住了一个坏人。|接着|原来|仍然|顺便",
+"申请表填完了，请把你的护照给我，我们要把护照（ ）一下。|打印|复印|收拾|排列",
+"我想给你做点儿羊肉饺子，刚才用刀切肉的时候不小心把手弄（ ）了。|破|干|咸|空",
+"他记下了房东的手机号码，可回家后打电话，电话总是（ ）。|迷路|推迟|占线|排队",
+"在看乒乓球比赛时，观众要安静，（ ）大声讲话或者离开座位随便走动。|允许|禁止|尊重|提醒",
+"明年我有机会也去那儿看看，（ ）哪个季节去丽江旅游比较好呢？|究竟|是否|仍然|接着"]],
+["Phần 2: Sắp xếp các câu thành đoạn văn hoàn chỉnh",[
+"Sắp xếp A, B, C thành đoạn văn:\nA. 随着气温的降低，那里许多植物的叶子都由绿变黄或者变红\nB. 吸引了很多游客去那儿参观\nC. 这几天北京的香山特别热闹|C - A - B|A - C - B|C - B - A|B - C - A",
+"Sắp xếp A, B, C thành đoạn văn:\nA. 海底的动物们一直在“说话”，只不过人的耳朵是听不到的\nB. 科学研究发现，海洋底部看上去非常安静\nC. 然而却不是一点儿声音也没有|B - A - C|A - B - C|B - C - A|C - B - A",
+"Sắp xếp A, B, C thành đoạn văn:\nA. 除此以外，你还可以用它来听音乐、看电影、付款购物等\nB. 现在手机不但价格降低了，而且作用也越来越大\nC. 打电话、发短信已经成了人们普遍使用的联系方法|B - C - A|C - B - A|B - A - C|A - B - C",
+"Sắp xếp A, B, C thành đoạn văn:\nA. 所以，房子还没到期，马克就开始着急换房子了\nB. 有一天，他在小区门口看到一个租房子的广告\nC. 马克去年租的房子离马路很近，周围环境非常吵|C - B - A|C - A - B|A - C - B|B - C - A",
+"Sắp xếp A, B, C thành đoạn văn:\nA. 但对我来说，最重要的是旅行能让我有机会尝到各地有名的小吃\nB. 放假的时候，我会收拾好行李，带上地图，买张火车票，向目的地出发\nC. 旅行不仅能丰富一个人的经历，而且是很好的减压方法|C - B - A|A - C - B|C - A - B|B - A - C"]],
+["Phần 3: Đọc đoạn văn và chọn đáp án đúng",[
+"大熊猫身子胖胖的，样子可爱极了。不过，它们数量不多，现在全世界一共才有一千多只。以前只有中国有大熊猫，为了表示友好，从1957年开始，中国把大熊猫作为礼物送给其他一些国家。现在，很多国家的人们在本国都能看到大熊猫了。\n★ 根据这段话，下面哪项是正确的？|现在全世界有一万多只大熊猫|以前很多国家都有大熊猫|中国送大熊猫给其他国家是为了表示友好|现在人们只能在中国看到大熊猫",
+"森林里的各种植物之间也有竞争。植物会为了阳光、空气和水而竞争。一些高大的植物往往能获得更多的阳光、空气和水，而剩下的一些比较低矮的植物就只能长在这些高大植物的下面。由于气候条件不同，世界各地植物叶子的样子也很不相同。在暖和、水分比较多的地方，叶子往往长得又大又厚；在阳光特别厉害、水分少的地方，叶子就会长得又细又长。\n★ 在阳光特别厉害、水分少的地方，植物的叶子是什么样的？|又大又厚|又细又长|由绿变黄|非常低矮",
+"地球上大约71%的地方是蓝色的海洋，在美丽的海底世界里，生活着各种各样的植物和动物。我们小时候都听过美人鱼的故事，其实真正的海底世界比故事里写的更美。就算在几公里深的海底也仍然能看到东西，许多鱼会发出各种颜色的亮光，像一个个排列起来的灯，美极了，就像在梦里一样。\n★ 为什么在几公里深的海底仍然能看到东西？|因为海底有阳光照进来|因为海底有很多美人鱼|因为许多鱼会发出各种颜色的亮光|因为人们在海底安装了灯",
+"现在的大学生一遇到不明白的问题，可以马上在网上查找答案，几秒钟就把问题解决了，这比我们上学的时候方便多了。现在的人们，尤其是大学生开始普遍使用电脑，他们的生活已经离不开电脑。据调查，70%的人遇到问题时，首先想到的就是上网找答案。\n★ 根据调查，70%的人遇到问题时首先会怎么做？|去图书馆查书|问学校的老师|上网查找答案|给朋友打电话",
+"每个人都会做梦，区别只是有多有少。有的人睡醒之后还记得梦里的事情，有的人却记不清楚了。你之所以觉得从来没做过梦，只不过是忘记了。一般晚上睡觉时，身体感觉到什么，人就容易梦到什么。记得有一次，我晚饭吃得太咸，那天晚上就梦见自己到处找商店买矿泉水。\n★ 说话人为什么会梦见自己到处找商店买矿泉水？|因为他白天逛了很多商店|因为他晚饭吃得太咸了|因为他从来没做过梦|因为上天想告诉他将来的事情",
+"21世纪，我们的生活发生了巨大变化。原来寄信需要好几天，现在连邮局都不用去，只要在家里上网发个电子邮件，用不了一分钟，远处的朋友就能收到，比写信封用的时间都短。以前外地的新闻要几天后才能知道，现在只要打开网站，任何信息都可以在第一时间获得。现代科学技术的发展让世界变得越来越小，所以现在人们都把地球叫作“地球村”。\n★ 为什么现在人们把地球叫作“地球村”？|因为地球的面积变小了|因为大家都搬到农村去住了|因为现代科技让世界变得越来越小，联系和获取信息非常快|因为现在没有人去邮局寄信了",
+"安娜早上没看见马克跟她打招呼，是因为她忘戴眼镜了，看不清楚。刚才马克看到安娜跳中国舞跳得非常好。安娜说她小时候妈妈教她跳过两年的舞，所以稍微有点儿基础。再说，舞蹈不仅是一门艺术，也是一种“语言”，这种语言与国籍无关，无论哪个国家的人都能看懂。\n★ 安娜早上为什么没有看见马克跟她打招呼？|因为她正在练习跳中国舞|因为她忘戴眼镜，看不清楚|因为她不认识马克|因为她故意不理马克",
+"很多外国人认为所有中国人都会功夫和乒乓球，其实只是喜爱这两种运动的中国人比较多。在中国你会发现到处都有乒乓球桌。像乒乓球、羽毛球、跑步等运动对条件要求不高，所以它们都成为人们运动不错的选择。人们常说“生命在于运动”，所以很多人一到周末就会到体育馆打几场球。“乒乓球”这个名字也很有意思，“乒”和“乓”就是打球时发出的声音。\n★ “乒乓球”这个名字是怎么来的？|是一个著名运动员的名字|是打球时发出的声音|是因为这种球对条件要求不高|是从一个外国词语翻译过来的",
+"丽江四季的风景都很美，而且环境保护得也很好，因此每年都吸引着成千上万的游客去那儿旅游。安娜去丽江旅行的时候，导游一路上给他们讲了很多有趣的笑话。有一次安娜把存包的钥匙丢了，最后还是导游帮她找到的。安娜觉得12月到第二年3月去丽江比较好，无论交通还是吃、住都很便宜。\n★ 安娜去丽江旅行时发生了什么事？|她在丽江迷路了|她错过了去丽江的航班|她把存包的钥匙丢了，导游帮她找到了|她认识了一个少数民族的导游",
+"中国南北距离约5500公里，因此南北气候有很大区别。每年三四月份的时候，如果从北方坐火车到南方去旅游，一路上你会发现窗外的树一棵一棵地变绿，北方也许还下着雪，南方却已经到处都是绿色了。南方菜很有特点，特别是汤，味道鲜美，很多北方人都喜欢喝。另外，南方和北方的语言也有很大不同。比如你跟上海人对话时，会发现上海话听起来就像外语一样。\n★ 根据这段话，下面哪项是正确的？|三四月份的时候，中国北方和南方到处都是绿色|北方人都不喜欢喝南方的汤|上海人不会讲普通话|中国南北方的气候和语言都有很大不同"]],
+["Phần 4: Chọn câu dịch tiếng Trung đúng nhất cho câu tiếng Việt",[
+"Nhìn mây trên trời kìa, hôm nay chắc chắn có mưa to.|你看天上的云，今天肯定有大雨。|你看天上的风，今天也许有大雨。|天上有很多白云，今天不会下雨。|你看天上的云，昨天肯定下大雨了。",
+"Đi Vạn Lý Trường Thành cũng là một ý hay đấy, chỉ có điều là xa quá.|去长城是一个好主意，因为不太远。|去长城倒是一个好主意，就是太远了。|我不想去长城，倒是因为太远了。|去香山倒是一个好主意，比长城远多了。",
+"Chó là loài động vật rất thông minh, chỉ cần dành chút thời gian dạy nó, nó sẽ học được rất nhiều thứ.|狗是很聪明的动物，必须花很多时间教它才能学会。|狗是很聪明的动物，只要稍微花点儿时间教教它，它就能学会很多东西。|只要你喜欢狗，它就能听懂你说的所有话。|狗虽然很聪明，但是教它完成任务非常容易。",
+"Trong giới tự nhiên, không ít động vật và thực vật vì để bảo vệ bản thân mà thay đổi màu sắc hoặc hình dáng cơ thể.|自然界中，不少动物和植物为了保护自己而改变身体的颜色或样子。|自然界中，所有动物都因为改变颜色而保护了环境。|为了改变身体的颜色和样子，不少动物和植物开始竞争。|森林里的植物为了阳光和水而改变了身体的颜色。",
+"Con người thông minh hơn động vật, nhưng động vật vẫn có rất nhiều điểm đáng để con người học tập.|动物比人聪明，所以人有很多值得向动物学习的地方。|人比动物聪明，因此动物没有什么值得人学习的地方。|人比动物聪明，但动物仍然有很多值得人学习的地方。|就算人比动物聪明，动物也仍然能听懂人的话。",
+"Xin hãy cho tôi biết ngày mai bạn có tham gia buổi tụ họp hay không.|请告诉我你明天究竟去哪儿参加聚会。|请告诉我你明天是否参加聚会。|我不知道他明天是否已经参加聚会了。|请问你明天为什么不参加我们的聚会？",
+"Đạp xe là một cách rèn luyện sức khỏe rất tốt, ngoài ra còn có thể bảo vệ môi trường.|骑自行车不仅能保护环境，而且能节约时间。|骑自行车是一种很好的锻炼身体的方式，除此以外，还能保护环境。|除了骑自行车以外，我还有很多锻炼身体的方式。|骑自行车虽然能锻炼身体，但是路上不太安全。",
+"Khi bị lạc đường, chỉ cần dùng bản đồ trên điện thoại tra cứu địa chỉ một chút là ngay lập tức biết đi đến địa điểm đó như thế nào.|迷路时，只要用手机地图查一下地址，马上就能知道怎么去那个地点。|迷路时，最好找警察问一下去那个地点的地址。|只要带上纸质地图，去任何地点都不会迷路。|手机地图虽然能查地址，但是迷路时却没有用。",
+"Sự phát triển của khoa học công nghệ hiện đại làm cho thế giới ngày càng nhỏ lại, vì vậy hiện nay mọi người đều gọi Trái Đất là “Ngôi làng toàn cầu”.|现代科学技术的发展让地球变得越来越大，人们把它叫作“地球村”。|因为世界本来就很小，所以人们把地球叫作“地球村”。|现代科学技术的发展让世界变得越来越小，所以现在人们都把地球叫作“地球村”。|人们之所以把地球叫作“地球村”，是因为大家都喜欢住在村子里。",
+"Không sao đâu, không cần xin lỗi, ai cũng có lúc bất cẩn điền sai mà.|没关系，不用道歉，谁都有粗心填错的时候。|对不起，我太粗心了，把申请表填错了。|如果你粗心填错了表格，就应该向老师道歉。|没关系，谁也不知道你把护照号码填错了。",
+"Hiện giờ tắc đường nghiêm trọng thế này, xem ra hôm nay không đi kịp chuyến bay 8 giờ đi Thượng Hải rồi.|现在堵车这么厉害，去上海的飞机肯定推迟了。|现在堵车这么厉害，看来今天坐不上8点那趟去上海的飞机了。|看来今天吃不上上海的小吃了，因为8点的飞机取消了。|虽然路上堵车很厉害，但是我们仍然坐上了8点的飞机。",
+"Tiền lương của công ty này tuy không tính là cao lắm, nhưng tiền thưởng rất nhiều, cho nên nhìn chung thu nhập vẫn khá tốt.|这个公司的工资和奖金都很高，总的来说工作很辛苦。|这个公司的工资虽然不算很高，但是奖金很多，所以总的来说收入还不错。|总的来说，我选择这个公司是因为离我家很近。|虽然奖金不多，但是这个公司的工资总的来说非常高。",
+"Mấu chốt của việc lựa chọn nghề nghiệp nằm ở sở thích, khi bạn thích làm một việc gì đó, bạn sẽ mang theo sự nhiệt huyết để làm việc.|选择职业的关键在于收入，收入高工作才有热情。|人们常说“生命在于运动”，所以周末要去打球。|选择职业的关键在于兴趣，当你喜欢做一件事情的时候，你会带着热情去工作。|无论选择什么职业，关键都在于是否能学到新技术。",
+"Tốt quá, vậy thì tôi yên tâm rồi, đừng để đang lái xe giữa chừng thì lại hết xăng.|好，那我就放心了，别开着开着没油了。|去机场的路上没有加油站，我真担心汽车没油了。|汽车开着开着就到了加油站，你可以放心了。|别担心，上高速公路以前我们已经加满油了。",
+"Đợi con gái vừa về đến nhà là anh sẽ báo ngay cho con tin vui này, trưa nay chúng ta còn đi nhà hàng đối diện ăn vịt quay để chúc mừng con.|女儿一放寒假我们就带她去广西旅游，吃那儿的烤鸭。|等女儿一回来我就告诉她这个好消息，中午我们还去对面的饭店吃烤鸭祝贺她。|女儿一听到去对面吃烤鸭的好消息，就高兴得跳了起来。|等女儿考试合格了，我们就去北京吃最有名烤鸭祝贺她。"]],
+["Phần 5: Chọn câu dịch tiếng Việt đúng nhất cho câu tiếng Trung",[
+"我以为坐出租车会快些，没想到倒比骑车还慢。|Tôi tưởng đi xe đạp sẽ nhanh hơn, không ngờ đi taxi lại nhanh hơn.|Tôi tưởng đi taxi sẽ nhanh hơn một chút, không ngờ ngược lại còn chậm hơn cả đi xe đạp.|Vì sợ đi taxi chậm nên tôi đã quyết định đi xe đạp.|Đi taxi tuy đắt nhưng ngược lại nhanh hơn đi xe đạp rất nhiều.",
+"干工作的时候一定要认真、仔细，要注意到计划上的每一个地方，否则就很容易出问题。|Khi làm việc nhất định phải nghiêm túc, tỉ mỉ, phải chú ý đến từng điểm trong kế hoạch, nếu không sẽ rất dễ xảy ra vấn đề.|Công việc này rất khó, dù bạn có làm cẩn thận theo kế hoạch thì vẫn sẽ xảy ra vấn đề.|Trước khi làm việc cần phải lập kế hoạch thật chi tiết để không bị giám đốc phê bình.|Anh ấy làm việc gì cũng rất nghiêm túc nên chẳng bao giờ xảy ra vấn đề gì.",
+"马上就要放暑假了，我打算先回一趟家看看我奶奶，然后回学校准备研究生考试。|Kỳ nghỉ đông sắp tới rồi, tôi định về thăm bà nội rồi đi du lịch cùng bạn bè.|Sắp nghỉ hè rồi, tôi dự định trước tiên về nhà một chuyến thăm bà nội, sau đó quay lại trường chuẩn bị cho kỳ thi cao học.|Sau khi thi xong kỳ thi nghiên cứu sinh, tôi sẽ về quê thăm bà nội một chuyến.|Kỳ nghỉ hè năm ngoái tôi đã về nhà thăm bà nội một lần rồi.",
+"胖一点儿没关系，健康最重要，千万不要为了减肥而不吃饭。|Muốn có sức khỏe tốt thì nhất định phải giảm cân và ăn ít đi.|Béo một chút không sao, sức khỏe là quan trọng nhất, ngàn vạn lần đừng vì giảm cân mà nhịn ăn.|Cô ấy vì muốn giảm cân nên mỗi ngày đều không ăn cơm tối.|Dù có hơi béo một chút nhưng sức khỏe của anh ấy vẫn rất tốt.",
+"现在人们选择职业时，不少人会以收入多少作为标准，当然也有人主要看自己是否喜欢这份工作。|Hiện nay khi chọn nghề, ai cũng chỉ quan tâm đến việc lương cao hay thấp.|Hiện nay khi mọi người lựa chọn nghề nghiệp, không ít người lấy mức thu nhập làm tiêu chuẩn, đương nhiên cũng có người chủ yếu xem bản thân có yêu thích công việc này hay không.|Tiêu chuẩn duy nhất để chọn công việc tốt là xem công việc đó có phù hợp với sở thích của mình không.|Dù thu nhập không cao nhưng tôi vẫn rất thích công việc hiện tại của mình.",
+"在网上写日记既能方便大家的交流，还能节约用纸，保护环境。|Viết nhật ký trên mạng tuy thuận tiện nhưng lại không an toàn vì ai cũng đọc được.|Viết nhật ký vào sổ giấy vừa giúp luyện chữ vừa bảo vệ mắt.|Viết nhật ký trên mạng vừa giúp việc giao lưu của mọi người thuận tiện hơn, lại vừa tiết kiệm giấy và bảo vệ môi trường.|Ngày càng có nhiều sinh viên thích đọc nhật ký của bạn bè trên mạng.",
+"很多人都试着对梦进行解释，有些人甚至专门写过这方面的书，可惜到现在仍然没有一个科学的说法。|Các nhà khoa học đã viết rất nhiều sách để giải thích chính xác tại sao con người lại nằm mơ.|Rất nhiều người đã thử giải thích về giấc mơ, có người thậm chí còn viết sách chuyên về lĩnh vực này, đáng tiếc đến nay vẫn chưa có một lời giải thích khoa học nào.|Không ai có thể giải thích được giấc mơ vì mỗi người đều mơ những giấc mơ khác nhau.|Quyển sách viết về giấc mơ này bán rất chạy vì nó có lời giải thích rất khoa học.",
+"给你申请表，出生年月、性别、护照号码都要填，还有联系地址、联系电话。|Khi điền đơn đăng ký, bạn chỉ cần ghi họ tên, quốc tịch và số điện thoại là được.|Đưa em tờ đơn đăng ký này, ngày tháng năm sinh, giới tính, số hộ chiếu đều phải điền, còn có địa chỉ liên lạc và số điện thoại liên lạc nữa.|Tôi đã điền xong ngày sinh và số hộ chiếu, nhưng quên chưa viết địa chỉ liên lạc.|Xin vui lòng kiểm tra lại xem số hộ chiếu và số điện thoại trên bảng đăng ký đã đúng chưa.",
+"我常去的那家理发店附近有个餐厅，那里的包子很好吃，我衣服口袋里有十几块零钱，买包子应该够。|Tiệm cắt tóc gần nhà hàng có bán bánh bao rất ngon nhưng giá hơi đắt.|Gần tiệm cắt tóc tôi hay đi có một nhà hàng, bánh bao ở đó rất ngon, trong túi áo tôi có hơn mười tệ tiền lẻ, chắc là đủ mua bánh bao.|Tôi định đi cắt tóc trước rồi mới ghé vào nhà hàng bên cạnh ăn bánh bao.|Trong túi tôi chỉ còn vài đồng tiền lẻ nên không đủ tiền trả tiền cắt tóc.",
+"你这个动作做得还是不太标准，应该像我这样：先抬胳膊，然后抬腿，最后头再向右转一下。|Động tác múa này rất đơn giản, bạn chỉ cần giơ hai tay lên cao rồi xoay một vòng là được.|Động tác này của bạn làm vẫn chưa chuẩn lắm, nên làm giống tôi thế này: trước tiên giơ cánh tay lên, sau đó nhấc chân lên, cuối cùng đầu lại quay sang phải một cái.|Khi tập múa Trung Quốc, khó nhất là động tác vừa giơ tay vừa quay đầu sang bên phải.|Bạn làm động tác này rất chuẩn rồi, bây giờ hãy dạy lại cho các bạn khác nhé.",
+"取得成功的人都经历过许多失败，他们的成功在于坚持不放弃。|Những người thành công đều không bao giờ gặp phải thất bại trong cuộc sống.|Khi gặp thất bại, chúng ta nên tìm một phương pháp khác thay vì tiếp tục kiên trì.|Những người đạt được thành công đều từng trải qua nhiều thất bại, sự thành công của họ nằm ở việc kiên trì không từ bỏ.|Chỉ cần không từ bỏ ước mơ thì ai cũng có thể trở thành người nổi tiếng.",
+"一会儿加完油，往西走五百米就能上高速公路，等我到了首都机场换好登机牌再给你发短信。|Đổ xăng xong rẽ phải năm trăm mét là tới sân bay Thủ Đô, bạn không cần tiễn tôi đâu.|Lát nữa đổ xăng xong, đi về hướng Tây 500 mét là có thể lên đường cao tốc, đợi khi nào tôi tới sân bay Thủ Đô đổi xong thẻ lên máy bay sẽ nhắn tin cho bạn.|Đi đường cao tốc mất khoảng nửa tiếng mới tới được trạm xăng gần sân bay Thủ Đô.|Tôi đã đổi xong thẻ lên máy bay ở sân bay Thủ Đô rồi, lát nữa lên máy bay tôi sẽ nhắn tin cho bạn.",
+"平时女儿那么多课，总是说想去旅行，但是没时间，怪可怜的，这次放寒假咱们带她去广西放松放松。|Con gái rất thích đi du lịch Quảng Tây vì mùa đông ở đó ấm áp và có nhiều hoa quả tươi.|Bình thường con gái học nhiều tiết như vậy, cứ nói muốn đi du lịch mãi mà không có thời gian, thấy tội nghiệp ghê, nghỉ đông lần này chúng mình đưa con đi Quảng Tây thư giãn một chuyến.|Kỳ nghỉ đông năm ngoái đồng nghiệp của tôi đã đưa con trai đi Quảng Tây chơi một chuyến rất vui.|Vì con gái thi đạt điểm cao nên chúng tôi quyết định thưởng cho con một chuyến du lịch.",
+"晚上躺在草地上看星星的感觉非常棒，有时候躺着躺着就安静地睡着了。|Buổi tối đi dạo trên bãi cỏ và ngắm sao cùng bạn bè là điều tuyệt vời nhất.|Cảm giác buổi tối nằm trên bãi cỏ ngắm sao tuyệt vời vô cùng, có lúc đang nằm ngắm thì ngủ thiếp đi một cách yên bình lúc nào không hay.|Vì buổi tối ngoài bãi cỏ rất mát mẻ nên nhiều người thích ra đó nằm nghỉ ngơi.|Đêm qua tôi nằm mơ thấy mình đang nằm trên bãi cỏ ngắm những ngôi sao sáng lấp lánh.",
+"说起吃的东西，给我印象最深的是湖南菜，它的特点就是辣，主要是咸辣、香辣和酸辣。|Người Hồ Nam rất thích ăn cay, món ăn nào của họ cũng cho rất nhiều ớt.|Nhắc đến đồ ăn, để lại ấn tượng sâu sắc nhất cho tôi là món ăn Hồ Nam, đặc điểm của nó là cay, chủ yếu là cay mặn, cay thơm và cay chua.|Mặc dù khắp cả nước đều có nhà hàng Hồ Nam nhưng tôi vẫn chưa có cơ hội nếm thử.|Khi đi du lịch, điều quan trọng nhất đối với tôi là được thưởng thức các món ăn vặt nổi tiếng."]],
+["Phần 6: Sắp xếp các từ/cụm từ thành câu hoàn chỉnh",[
+"① 咖啡吧 ② 麻烦你 ③ 困死我了 ④ 给我倒杯|②④①，③。|④①②，③。|③，②①④。|②①④，③。",
+"① 照顾一下 ② 我要 ③ 你能帮我 ④ 出趟差 ⑤ 我的小狗吗|②④，③①⑤？|③①⑤，②④？|②①④，③⑤？|④②，③⑤①？",
+"① 更有能力 ② 北风与南风 ③ 而吵了起来 ④ 为了比谁|②④①③。|④①②③。|②③④①。|④②①③。",
+"① 跟这个 ② 婚姻 ③ 没有关系 ④ 是否幸福|②④①③。|②①③④。|④②①③。|①③②④。",
+"① 先不要还 ② 这本书的内容 ③ 我接着看 ④ 你看完以后 ⑤ 非常有趣|②⑤，④①，③。|④①，②⑤，③。|②⑤，③，④①。|④③，②⑤，①。",
+"① “母亲河” ② 人们把它 ③ 黄河是中国 ④ 叫作 ⑤ 第二大河|③⑤，②④①。|②④①，③⑤。|③②④①⑤。|②③⑤④①。",
+"① 怎么想都 ② 昨天我做了一个 ③ 但是早上起来 ④ 想不起来 ⑤ 奇怪的梦|②⑤，③①④。|③①④，②⑤。|②③⑤，①④。|①④，②⑤③。",
+"① 填错了 ② 我不小心 ③ 护照号码 ④ 把|②④③①。|②③④①。|④③②①。|③④②①。",
+"① 到体育馆 ② 人们常说“生命在于运动” ③ 打几场球 ④ 所以很多人 ⑤ 一到周末就会|②，④⑤①③。|④⑤①③，②。|②，⑤④③①。|④①③，②⑤。",
+"① 带上地图 ② 向目的地出发 ③ 我会收拾好行李 ④ 放假的时候 ⑤ 买张火车票|④，③，①，⑤，②。|④，①，②，③，⑤。|③，④，⑤，①，②。|④，⑤，②，③，①。"]]
+];
+const H=[
+"下完雨 (sau khi mưa xong), 气温 (nhiệt độ không khí), 降低 (hạ thấp, giảm xuống), 凉快 (mát mẻ), 热闹 (náo nhiệt), 暖和 (ấm áp), 严格 (nghiêm khắc)",
+"六一儿童节 (Quốc tế thiếu nhi 1/6), 父母 (bố mẹ), 动物园 (sở thú), 入口 (cổng vào), 排队 (xếp hàng), 热闹 (náo nhiệt)",
+"机场 (sân bay), 广播 (phát thanh), 航班 (chuyến bay), 推迟 (hoãn lại), 起飞 (cất cánh)",
+"虽然 (mặc dù), 便宜 (rẻ), 质量 (chất lượng), 倒 (ngược lại - trái với dự đoán), 仍然 (vẫn)",
+"大黑狗 (chú chó mực lớn), 毛 (lông), 聪明 (thông minh), 抱 (ôm, bế), 抬 (giơ lên, khiêng), 抓 (bắt)",
+"完成 (hoàn thành), 任务 (nhiệm vụ), 耐心 (kiên nhẫn), 熟悉 (quen thuộc), 严格 (nghiêm khắc, nghiêm ngặt), 按照 (theo, dựa theo)",
+"感冒 (cảm cúm), 心里 (trong lòng), 难受 (khó chịu, buồn rầu), 陪 (ở bên cạnh), 可怜 (đáng thương)",
+"上个月 (tháng trước), 北京动物园 (sở thú Bắc Kinh), 趟 (chuyến, lần đi lại), 导游 (hướng dẫn viên), 亚洲 (châu Á)",
+"森林 (rừng rậm), 植物 (thực vật), 阳光 (ánh nắng), 空气 (không khí), 竞争 (cạnh tranh)",
+"海底 (đáy biển), 公里 (kilômét), 仍然 (vẫn như cũ), 发出 (phát ra), 亮光 (ánh sáng)",
+"科学知识 (kiến thức khoa học), 卖 (bán), 火 (nổi tiếng, bán chạy, hot), 儿童 (trẻ em)",
+"语言 (ngôn ngữ), 简单易懂 (đơn giản dễ hiểu), 担心 (lo lắng), 是否 (có... hay không), 读懂 (đọc hiểu)",
+"互联网 (mạng Internet), 技术 (kỹ thuật, công nghệ), 学习方式 (phương thức học tập), 受不了 (chịu không nổi)",
+"日记 (nhật ký), 安全 (an toàn), 密码 (mật mã), 允许 (cho phép)",
+"做梦 (nằm mơ), 桥 (cây cầu), 危险 (nguy hiểm), 接着 (ngay sau đó, tiếp theo), 警察 (cảnh sát), 抓 (bắt)",
+"申请表 (đơn đăng ký), 护照 (hộ chiếu), 号码 (số), 填错 (điền sai), 打印 (in), 复印 (photocopy, sao chụp)",
+"羊肉饺子 (sủi cảo thịt cừu), 刀 (con dao), 切肉 (thái thịt), 破 (rách, đứt, bị thương), 流血 (chảy máu)",
+"租房子 (thuê nhà), 房东 (chủ nhà), 手机号码 (số điện thoại), 占线 (đường dây bận)",
+"乒乓球 (bóng bàn), 比赛 (trận đấu), 运动员 (vận động viên), 发球 (phát bóng), 观众 (khán giả), 禁止 (cấm), 座位 (chỗ ngồi)",
+"丽江 (Lệ Giang), 季节 (mùa), 旅游 (du lịch), 究竟 (rốt cuộc - nhấn mạnh trong câu hỏi)",
+"香山 (Hương Sơn), 热闹 (náo nhiệt), 气温 (nhiệt độ), 降低 (giảm xuống), 植物 (thực vật), 叶子 (lá cây), 吸引 (thu hút), 游客 (du khách), 参观 (tham quan)",
+"海底 (đáy biển), 安静 (yên tĩnh), 动物 (động vật), 说话 (nói chuyện), 只不过 (chỉ có điều là), 耳朵 (đôi tai), 科学研究 (nghiên cứu khoa học)",
+"手机 (điện thoại), 价格 (giá cả), 降低 (giảm xuống), 作用 (tác dụng), 除此以外 (ngoài điều đó ra), 付款购物 (thanh toán mua sắm), 方便 (thuận tiện)",
+"租 (thuê), 房子 (nhà), 马路 (đường cái), 吵 (ồn ào), 到期 (đến hạn), 着急 (lo lắng, sốt ruột), 广告 (quảng cáo)",
+"旅行 (du lịch), 丰富 (làm phong phú), 经历 (trải nghiệm), 减压 (giảm áp lực), 尝 (nếm thử), 小吃 (món ăn vặt), 收拾 (thu dọn), 行李 (hành lý), 出发 (xuất phát)",
+"大熊猫 (gấu trúc lớn), 身子 (thân hình), 胖胖的 (mũm mĩm), 数量 (số lượng), 全世界 (toàn thế giới), 表示友好 (bày tỏ hữu nghị), 作为 (coi như là), 礼物 (món quà), 本国 (nước mình)",
+"植物 (thực vật), 竞争 (cạnh tranh), 高大 (cao lớn), 获得 (đạt được), 剩下 (còn lại), 低矮 (thấp bé), 气候条件 (điều kiện khí hậu), 暖和 (ấm áp), 水分 (độ ẩm), 细 (nhỏ, mảnh)",
+"地球 (Trái Đất), 海洋 (đại dương), 海底 (đáy biển), 美人鱼 (nàng tiên cá), 排列 (sắp xếp), 亮光 (ánh sáng), 梦 (giấc mơ)",
+"大学生 (sinh viên), 遇到 (gặp phải), 查找 (tìm kiếm), 秒 (giây), 解决 (giải quyết), 普遍 (phổ biến), 离不开 (không thể tách rời), 据调查 (theo điều tra)",
+"做梦 (nằm mơ), 区别 (sự khác biệt), 睡醒 (tỉnh ngủ), 之所以 (sở dĩ), 只不过 (chỉ là), 咸 (mặn), 矿泉水 (nước suối), 解释 (giải thích), 科学的说法 (cách giải thích khoa học)",
+"世纪 (thế kỷ), 巨大 (to lớn), 乘坐 (đi bằng phương tiện), 邮局 (bưu điện), 电子邮件 (email), 信封 (phong bì), 网站 (trang web), 信息 (thông tin), 把……叫作…… (gọi... là...), 地球村 (ngôi làng toàn cầu)",
+"打招呼 (chào hỏi), 故意 (cố ý), 戴眼镜 (đeo kính), 舞蹈 (múa), 基础 (nền tảng, cơ bản), 艺术 (nghệ thuật), 国籍 (quốc tịch), 无关 (không liên quan)",
+"功夫 (võ kungfu), 乒乓球 (bóng bàn), 羽毛球 (cầu lông), 生命在于运动 (sự sống nằm ở vận động), 体育馆 (nhà thi đấu), 声音 (âm thanh)",
+"丽江 (Lệ Giang), 四季 (bốn mùa), 成千上万 (hàng ngàn hàng vạn), 导游 (hướng dẫn viên), 笑话 (truyện cười), 存包 (gửi túi), 钥匙 (chìa khóa), 丢 (mất)",
+"距离 (khoảng cách), 区别 (khác biệt), 棵 (lượng từ của cây), 汤 (canh, súp), 味道鲜美 (hương vị tươi ngon), 对话 (đối thoại), 普通话 (tiếng phổ thông)",
+"看 (nhìn), 天上 (trên trời), 云 (mây), 肯定 (chắc chắn), 大雨 (mưa to)",
+"去 (đi), 长城 (Trường Thành), 倒 (lại là - phó từ), 好主意 (ý kiến hay), 就是 (chỉ là), 太远 (quá xa)",
+"狗 (chó), 聪明 (thông minh), 动物 (động vật), 只要 (chỉ cần), 稍微 (hơi, một chút), 花时间 (dành thời gian), 教 (dạy), 学会 (học được)",
+"自然界 (giới tự nhiên), 动物 (động vật), 植物 (thực vật), 为了……而…… (vì... mà...), 保护自己 (bảo vệ bản thân), 改变 (thay đổi), 颜色 (màu sắc)",
+"人 (con người), 比 (so với), 动物 (động vật), 聪明 (thông minh), 仍然 (vẫn), 值得 (đáng), 学习 (học tập)",
+"请 (xin hãy), 告诉 (nói cho biết), 明天 (ngày mai), 是否 (có... hay không), 参加 (tham gia), 聚会 (buổi tụ họp)",
+"骑自行车 (đi xe đạp), 锻炼身体 (rèn luyện sức khỏe), 方式 (cách thức), 除此以外 (ngoài ra), 保护环境 (bảo vệ môi trường)",
+"迷路 (lạc đường), 只要 (chỉ cần), 手机地图 (bản đồ điện thoại), 查 (tra cứu), 地址 (địa chỉ), 马上 (ngay lập tức), 地点 (địa điểm)",
+"现代 (hiện đại), 科学技术 (khoa học kỹ thuật), 发展 (phát triển), 世界 (thế giới), 把……叫作…… (gọi... là...), 地球村 (ngôi làng toàn cầu)",
+"没关系 (không sao đâu), 不用 (không cần), 道歉 (xin lỗi), 谁都…… (ai cũng...), 粗心 (sơ suất, bất cẩn), 填错 (điền sai)",
+"堵车 (tắc đường), 厉害 (nghiêm trọng, dữ dội), 看来 (xem ra), 坐不上 (không đi kịp), 趟 (chuyến), 飞机 (máy bay)",
+"公司 (công ty), 工资 (tiền lương), 不算高 (không tính là cao), 奖金 (tiền thưởng), 总的来说 (nói chung), 收入 (thu nhập), 不错 (khá tốt)",
+"选择职业 (lựa chọn nghề nghiệp), 关键 (mấu chốt), 在于 (nằm ở chỗ), 兴趣 (hứng thú), 热情 (nhiệt huyết)",
+"加油 (đổ xăng), 放心 (yên tâm), 别 (đừng), 开着开着 (đang lái thì...), 没油 (hết xăng)",
+"等 (đợi), 女儿 (con gái), 一……就…… (hễ... thì...), 告诉 (nói cho biết), 好消息 (tin tốt), 中午 (buổi trưa), 对面 (đối diện), 烤鸭 (vịt quay), 祝贺 (chúc mừng)",
+"以为 (tưởng rằng), 出租车 (xe taxi), 没想到 (không ngờ), 倒 (ngược lại), 骑车 (đi xe đạp), 慢 (chậm)",
+"干工作 (làm việc), 认真 (nghiêm túc), 仔细 (tỉ mỉ, cẩn thận), 计划 (kế hoạch), 否则 (nếu không thì), 出问题 (xảy ra vấn đề)",
+"放暑假 (nghỉ hè), 安排 (sắp xếp, kế hoạch), 先 (trước tiên), 回一趟家 (về nhà một chuyến), 研究生 (nghiên cứu sinh/cao học)",
+"胖 (béo), 没关系 (không sao), 健康 (sức khỏe), 千万不要 (nhất định đừng), 为了……而…… (vì... mà...), 减肥 (giảm cân)",
+"选择职业 (chọn nghề), 考虑 (cân nhắc), 以……作为标准 (lấy... làm tiêu chuẩn), 收入 (thu nhập), 是否 (có... hay không)",
+"在网上写日记 (viết nhật ký trên mạng), 既……又/还…… (vừa... vừa...), 方便 (thuận tiện), 交流 (giao lưu), 节约用纸 (tiết kiệm giấy), 保护环境 (bảo vệ môi trường)",
+"做梦 (nằm mơ), 试着 (thử), 进行解释 (tiến hành giải thích), 甚至 (thậm chí), 专门 (chuyên, riêng), 仍然 (vẫn), 科学的说法 (lời giải thích khoa học)",
+"申请表 (đơn đăng ký), 出生年月 (ngày tháng năm sinh), 性别 (giới tính), 护照号码 (số hộ chiếu), 填 (điền), 联系地址 (địa chỉ liên lạc)",
+"理发店 (tiệm cắt tóc), 附近 (gần đây), 餐厅 (nhà hàng), 包子 (bánh bao), 口袋 (túi áo/quần), 零钱 (tiền lẻ), 够 (đủ)",
+"动作 (động tác), 标准 (chuẩn), 仔细 (kỹ, cẩn thận), 先 (trước tiên), 抬胳膊 (giơ cánh tay lên), 抬腿 (nhấc chân lên), 向右转 (quay sang phải)",
+"成功 (thành công), 经历 (trải qua), 失败 (thất bại), 在于 (nằm ở chỗ), 坚持 (kiên trì), 放弃 (từ bỏ)",
+"加油 (đổ xăng), 往西 (về hướng Tây), 高速公路 (đường cao tốc), 换 (đổi), 登机牌 (thẻ lên máy bay), 首都机场 (sân bay Thủ Đô)",
+"平时 (bình thường), 总是 (luôn), 旅行 (du lịch), 怪可怜的 (tội nghiệp ghê), 放寒假 (nghỉ đông), 放松 (thư giãn)",
+"躺 (nằm), 草地 (bãi cỏ), 星星 (ngôi sao), 棒 (tuyệt vời), 躺着躺着 (đang nằm thì...), 安静 (yên tĩnh), 睡着 (ngủ thiếp đi)",
+"说起 (nhắc đến), 印象最深 (ấn tượng sâu sắc nhất), 湖南菜 (món ăn Hồ Nam), 特点 (đặc điểm), 咸辣 (mặn cay), 香辣 (thơm cay), 酸辣 (chua cay), 尝 (nếm thử)",
+"麻烦 (làm phiền), 倒 (rót), 杯 (cốc, ly), 咖啡 (cà phê), 困死 (buồn ngủ chết đi được)",
+"出趟差 (đi công tác một chuyến), 照顾 (chăm sóc), 小狗 (chú chó nhỏ)",
+"北风 (gió Bắc), 南风 (gió Nam), 为了……而…… (vì... mà...), 比 (so sánh, thi), 能力 (năng lực), 吵了起来 (cãi nhau ầm lên)",
+"婚姻 (hôn nhân), 是否 (có... hay không), 幸福 (hạnh phúc), 跟……没有关系 (không liên quan tới...)",
+"内容 (nội dung), 有趣 (thú vị), 看完 (xem xong), 先不要还 (đừng trả vội), 接着 (tiếp tục)",
+"黄河 (sông Hoàng Hà), 第二大河 (con sông lớn thứ hai), 把……叫作…… (gọi... là...), 母亲河 (sông Mẹ)",
+"奇怪 (kỳ lạ), 梦 (giấc mơ), 早上起来 (sáng thức dậy), 怎么……都…… (làm thế nào cũng...), 想不起来 (không nhớ ra nổi)",
+"不小心 (không cẩn thận), 把 (câu chữ 把), 护照号码 (số hộ chiếu), 填错 (điền sai)",
+"生命 (sự sống), 在于 (nằm ở), 运动 (vận động), 一……就…… (hễ... là...), 体育馆 (nhà thi đấu), 打几场球 (đánh vài trận bóng)",
+"收拾 (thu dọn), 行李 (hành lý), 带上 (mang theo), 地图 (bản đồ), 向 (hướng về), 目的地 (đích đến), 出发 (xuất phát)"];
+const K="BBACDACBABCABCABACBAACABCCBCCBCBBCDABBACBBACABBCABBABBBCBBBBCBBBBAAAAAAAAAA";
+const TIPS=["Từ vựng trong ngữ cảnh (是否, 究竟, 仍然, 接着, 倒, 禁止...)","Liên kết câu & sắp xếp đoạn văn","Đọc hiểu: tìm ý chính, chi tiết trong đoạn","Dịch Việt → Trung: chú ý cấu trúc ngữ pháp (只要…就, 为了…而, 是否, 倒是…就是…)","Dịch Trung → Việt: nắm đủ ý, tránh đáp án sai một chi tiết","Trật tự từ: câu 把, 一…就…, 为了…而…, 是否"];
+const $=id=>document.getElementById(id),L="ABCD";
+const Q=[];S.forEach((s,si)=>s[1].forEach(q=>{const p=q.split("|");Q.push({sec:si,s:p[0],o:p.slice(1)})}));
+let t0=0,tick=null,sel=[],done=false,pass=false;
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const zh=s=>/[\u4e00-\u9fff]/.test(s);
+function setZ(e){const t=e.dataset.t;e.innerHTML=($("py").checked&&window.pinyinPro&&zh(t))?pinyinPro.html(t):esc(t)}
+function build(){let h="",n=0;S.forEach((s,si)=>{h+=`<div class="c"><h2>${s[0]}</h2></div>`;s[1].forEach(()=>{const q=Q[n];h+=`<div class="q">${H[n]?`<div class="hv">💡 Gợi ý từ vựng: <span class="z" data-t="${esc(H[n])}"></span></div>`:""}<div class="st">Câu ${n+1}: <span class="z" data-t="${esc(q.s).replace(/"/g,"&quot;")}"></span></div>`;q.o.forEach((o,j)=>{h+=`<label class="o" id="o${n}_${j}"><input type="radio" name="q${n}" value="${j}"><span class="z" data-t="${esc(o).replace(/"/g,"&quot;")}"></span></label>`});h+=`<div class="an hide" id="a${n}"></div></div>`;n++})});
+$("qs").innerHTML=h;document.querySelectorAll(".z").forEach(setZ);
+document.querySelectorAll("input[type=radio]").forEach(r=>r.onchange=()=>{sel[+r.name.slice(1)]=+r.value})}
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
+function start(){const nm=$("nm").value.trim(),cl=$("cl").value.trim();if(!nm||!cl){alert("Vui lòng nhập đầy đủ họ tên và lớp.");return}
+$("intro").classList.add("hide");$("main").classList.remove("hide");$("res").classList.add("hide");$("who").textContent=nm+" – "+cl;
+sel=[];done=false;pass=false;build();$("sub").disabled=true;t0=Date.now();clearInterval(tick);tick=setInterval(upd,500);upd();window.scrollTo(0,0)}
+function upd(){if(done)return;const e=Math.floor((Date.now()-t0)/1000),r=2700-e;
+if(r>0){$("tm").textContent="⏱ "+fmt(r);$("sub").disabled=true;$("hint").textContent="Chỉ được nộp bài sau khi đủ 45 phút làm bài."}
+else{$("tm").textContent="⏱ Đã đủ 45 phút";$("sub").disabled=false;$("hint").textContent="Bạn đã có thể nộp bài."}}
+function submit(){if(!confirm("Nộp bài ngay bây giờ?"))return;done=true;clearInterval(tick);
+const ps=S.map(()=>[0,0]);let c=0;Q.forEach((q,i)=>{ps[q.sec][1]++;if(sel[i]===L.indexOf(K[i])){c++;ps[q.sec][0]++}});
+const sc=Math.round(c/Q.length*100)/10;pass=sc>=7;
+document.querySelectorAll("input[type=radio]").forEach(r=>r.disabled=true);
+if(pass)Q.forEach((q,i)=>{const k=L.indexOf(K[i]);$("o"+i+"_"+k).classList.add("ok");if(sel[i]!==undefined&&sel[i]!==k)$("o"+i+"_"+sel[i]).classList.add("no");
+const a=$("a"+i);a.classList.remove("hide");a.textContent=sel[i]===k?"✔ Chính xác – đáp án "+K[i]:(sel[i]===undefined?"✘ Chưa làm – đáp án đúng: ":"✘ Sai – đáp án đúng: ")+K[i]});
+let h=`<h2>Kết quả – ${esc($("who").textContent)}</h2><div class="big" style="color:${pass?"var(--ok)":"var(--no)"}">${sc.toFixed(1)}/10</div><p style="text-align:center">Đúng ${c}/${Q.length} câu</p><table><tr><th>Phần</th><th>Đúng</th><th>Nhận xét</th></tr>`;
+ps.forEach((p,i)=>{const r=p[0]/p[1],m=r>=.85?"Rất tốt, nắm vững.":r>=.7?"Khá tốt, cần xem lại vài chỗ.":r>=.5?"Trung bình – ôn thêm: ":"Còn yếu – cần ôn kỹ: ";
+h+=`<tr><td>${esc(S[i][0].split(":")[0])}</td><td>${p[0]}/${p[1]}</td><td>${m}${r<.7?TIPS[i]:""}</td></tr>`});
+h+="</table>";
+const best=ps.map((p,i)=>[p[0]/p[1],i]).sort((a,b)=>a[0]-b[0]);
+h+=`<p><b>Nhận xét chung:</b> `+(sc>=9?"Xuất sắc! Bạn nắm rất chắc kiến thức bài 17-20.":sc>=8?"Rất tốt! Chỉ cần xem lại một vài lỗi nhỏ.":sc>=7?"Đạt yêu cầu. Hãy xem kỹ các câu sai bên dưới để củng cố.":"Chưa đạt (dưới 7 điểm). Bạn cần ôn lại từ vựng và ngữ pháp bài 17-20 rồi làm lại bài.")+(pass?"":` Phần cần ưu tiên: <b>${esc(S[best[0][1]][0].split(":")[0])}</b>.`)+"</p>";
+h+=pass?`<p>Đáp án đã được hiển thị bên trên: xanh là đáp án đúng, đỏ là lựa chọn sai của bạn.</p>`:`<p style="color:var(--no)"><b>Đáp án chưa được hiển thị.</b> Hãy làm lại bài để đạt từ 7 điểm trở lên.</p><button id="rt">Làm lại bài</button>`;
+$("res").innerHTML=h;$("res").classList.remove("hide");$("sub").disabled=true;$("hint").textContent="";
+if(!pass)$("rt").onclick=()=>{$("main").classList.add("hide");$("intro").classList.remove("hide");window.scrollTo(0,0)};
+$("res").scrollIntoView({behavior:"smooth"})}
+$("go").onclick=start;$("sub").onclick=submit;
+$("py").onchange=()=>document.querySelectorAll(".z").forEach(setZ);
+window.addEventListener("beforeunload",e=>{if(t0&&!done&&!$("main").classList.contains("hide")){e.preventDefault();e.returnValue=""}});
+</script>
+</body>
+</html>

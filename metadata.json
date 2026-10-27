@@ -1,0 +1,6 @@
+{
+  "name": "XUN HSK",
+  "description": "Nền tảng ôn tập tiếng Trung HSK 4 - Hệ thống bài tập trắc nghiệm và đề thi tổng hợp Thầy Huân.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

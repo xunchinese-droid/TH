@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Ôn Tập HSK 4 - Bài 20</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #ffc107;
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --correct-color: #4caf50;
+            --incorrect-color: #f44336;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+
+        .header h3 {
+            color: #555;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .section-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .question-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 8px;
+        }
+
+        .options label {
+            display: block;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .options label:hover {
+            background: #f0f0f0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #b71c1c;
+        }
+
+        #result-container {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .score-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .feedback-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Classes for showing results */
+        .correct-answer {
+            background-color: #e8f5e9 !important;
+            border-color: var(--correct-color) !important;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .incorrect-answer {
+            background-color: #ffebee !important;
+            border-color: var(--incorrect-color) !important;
+            color: #c62828;
+            text-decoration: line-through;
+        }
+        
+        .scrambled-words {
+            font-size: 1.2em;
+            color: #0056b3;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>BÀI TẬP ÔN TẬP HSK 4 - BÀI 20</h1>
+        <h2>路上的风景</h2>
+        <h3>Biên soạn: Giáo viên <b>Trần Văn Huân</b></h3>
+    </div>
+
+    <form id="quiz-form">
+        <!-- PHẦN 1: TRUNG SANG VIỆT -->
+        <h2 class="section-title">Phần 1: Dịch câu từ tiếng Trung sang tiếng Việt (Chọn đáp án đúng nhất)</h2>
+        
+        <div class="question-block" data-q="1">
+            <div class="question-text">Câu 1: 航班本来是十点的，后来机场网站上通知推迟了一个小时。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="A"> A. Chuyến bay vốn dĩ lúc 10 giờ, sau đó trên trang web sân bay thông báo hoãn lại một tiếng.</label></li>
+                <li><label><input type="radio" name="q1" value="B"> B. Chuyến bay vốn dĩ lúc 10 giờ, sau đó sân bay thông báo xuất phát sớm một tiếng.</label></li>
+                <li><label><input type="radio" name="q1" value="C"> C. Chuyến bay xuất phát lúc 10 giờ, nhưng trang web thông báo đã bị hủy.</label></li>
+                <li><label><input type="radio" name="q1" value="D"> D. Chuyến bay lúc 10 giờ, sau đó hành khách yêu cầu hoãn lại một tiếng.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="2">
+            <div class="question-text">Câu 2: 等女儿一回来我就告诉她这个好消息。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="A"> A. Đợi con gái về tôi sẽ nói cho cô ấy biết tin xấu này.</label></li>
+                <li><label><input type="radio" name="q2" value="B"> B. Đợi con gái vừa về là tôi sẽ nói cho con bé biết tin tốt này.</label></li>
+                <li><label><input type="radio" name="q2" value="C"> C. Con gái vừa về đã nói cho tôi biết một tin tức tốt.</label></li>
+                <li><label><input type="radio" name="q2" value="D"> D. Tôi đang đợi con gái mang tin tốt về.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="3">
+            <div class="question-text">Câu 3: 究竟哪个季节去丽江旅游比较好呢？</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="A"> A. Rốt cuộc thì mùa nào đi Lệ Giang du lịch là tốt nhất?</label></li>
+                <li><label><input type="radio" name="q3" value="B"> B. Cuối cùng thì mùa nào cũng có thể đi du lịch Lệ Giang phải không?</label></li>
+                <li><label><input type="radio" name="q3" value="C"> C. Rốt cuộc thì mùa nào đi du lịch Lệ Giang thì khá tốt nhỉ?</label></li>
+                <li><label><input type="radio" name="q3" value="D"> D. Mùa nào đi du lịch Lệ Giang cũng đều khá tốt.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="4">
+            <div class="question-text">Câu 4: 你跟上海人对话时，会发现上海话听起来就像外语一样。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="A"> A. Khi bạn nói chuyện với người Thượng Hải, sẽ thấy tiếng Thượng Hải rất giống tiếng phổ thông.</label></li>
+                <li><label><input type="radio" name="q4" value="B"> B. Khi bạn đối thoại với người Thượng Hải, sẽ phát hiện ra tiếng Thượng Hải nghe cứ như ngoại ngữ vậy.</label></li>
+                <li><label><input type="radio" name="q4" value="C"> C. Người Thượng Hải khi nói chuyện thường thích dùng ngoại ngữ.</label></li>
+                <li><label><input type="radio" name="q4" value="D"> D. Người Thượng Hải nói ngoại ngữ nghe giống hệt tiếng bản địa.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="5">
+            <div class="question-text">Câu 5: 说起吃的东西，给我印象最深的是湖南菜。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="A"> A. Nhắc đến đồ ăn, thứ mang lại cho tôi ấn tượng sâu sắc nhất là món ăn Hồ Nam.</label></li>
+                <li><label><input type="radio" name="q5" value="B"> B. Khi ăn đồ ăn, tôi luôn nhớ đến các món ăn của Hồ Nam.</label></li>
+                <li><label><input type="radio" name="q5" value="C"> C. Món ăn Hồ Nam là đồ ăn ngon nhất mà tôi từng được ăn.</label></li>
+                <li><label><input type="radio" name="q5" value="D"> D. Nói về đồ ăn, tôi chỉ có ấn tượng với mỗi món Hồ Nam.</label></li>
+            </ul>
+        </div>
+
+        <!-- PHẦN 2: VIỆT SANG TRUNG -->
+        <h2 class="section-title">Phần 2: Dịch câu từ tiếng Việt sang tiếng Trung (Chọn đáp án đúng nhất)</h2>
+
+        <div class="question-block" data-q="6">
+            <div class="question-text">Câu 6: Đi đường cao tốc khoảng nửa tiếng là đến rồi.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="A"> A. 走高速公路大约一个小时就到了。</label></li>
+                <li><label><input type="radio" name="q6" value="B"> B. 去高速公路大约半个小时就出发了。</label></li>
+                <li><label><input type="radio" name="q6" value="C"> C. 走高速公路大约半个小时就到了。</label></li>
+                <li><label><input type="radio" name="q6" value="D"> D. 走高速公路只有半个小时。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="7">
+            <div class="question-text">Câu 7: Đến lúc đó con gái biết được chắc chắn sẽ đặc biệt vui mừng.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="A"> A. 到时她知道了肯定特别开心。</label></li>
+                <li><label><input type="radio" name="q7" value="B"> B. 那时候她知道了可能很不开心。</label></li>
+                <li><label><input type="radio" name="q7" value="C"> C. 等她知道了肯定非常着急。</label></li>
+                <li><label><input type="radio" name="q7" value="D"> D. 到时她不知道肯定特别开心。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="8">
+            <div class="question-text">Câu 8: Có một lần tôi làm mất chìa khóa gửi đồ, cuối cùng vẫn là anh ấy giúp tôi tìm thấy.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="A"> A. 有一次我把存包的钥匙丢了，最后是我自己找到的。</label></li>
+                <li><label><input type="radio" name="q8" value="B"> B. 有一次我把存包的钥匙丢了，最后还是他帮我找到的。</label></li>
+                <li><label><input type="radio" name="q8" value="C"> C. 有一次他把我的钥匙丢了，最后还是他帮我找到的。</label></li>
+                <li><label><input type="radio" name="q8" value="D"> D. 一次我把存包的钱包丢了，最后他帮我找到的。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="9">
+            <div class="question-text">Câu 9: Món ăn miền Nam rất có đặc điểm, đặc biệt là các món canh, mùi vị tươi ngon.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" value="A"> A. 北方菜很有特点，特别是汤，味道鲜美。</label></li>
+                <li><label><input type="radio" name="q9" value="B"> B. 南方菜很有特点，特别是汤，味道鲜美。</label></li>
+                <li><label><input type="radio" name="q9" value="C"> C. 南方菜很有特点，特别是辣，味道鲜美。</label></li>
+                <li><label><input type="radio" name="q9" value="D"> D. 南方菜没有特点，除了汤味道鲜美。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="10">
+            <div class="question-text">Câu 10: Mỗi lần kết thúc chuyến du lịch, tôi đều bắt đầu công việc của mình với tinh thần hăng hái (gấp trăm lần).</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="A"> A. 每次旅行结束后，我都会精神百倍地开始我的工作。</label></li>
+                <li><label><input type="radio" name="q10" value="B"> B. 每次工作结束后，我都会精神百倍地去旅行。</label></li>
+                <li><label><input type="radio" name="q10" value="C"> C. 旅行开始前，我都会精神百倍地做我的工作。</label></li>
+                <li><label><input type="radio" name="q10" value="D"> D. 每次旅行结束后，我都觉得特别累，不想工作。</label></li>
+            </ul>
+        </div>
+
+        <!-- PHẦN 3: SẮP XẾP CÂU -->
+        <h2 class="section-title">Phần 3: Sắp xếp các phân câu thành một câu hoàn chỉnh</h2>
+
+        <div class="question-block" data-q="11">
+            <div class="question-text">Câu 11:<br>A. 然后再放下来<br>B. 我擦完之后<br>C. 你先把桌子上的东西拿起来</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q11" value="A"> A. A - B - C</label></li>
+                <li><label><input type="radio" name="q11" value="B"> B. C - B - A</label></li>
+                <li><label><input type="radio" name="q11" value="C"> C. B - A - C</label></li>
+                <li><label><input type="radio" name="q11" value="D"> D. C - A - B</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="12">
+            <div class="question-text">Câu 12:<br>A. 无论交通还是吃、住<br>B. 这段时间去丽江的话<br>C. 都很便宜</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q12" value="A"> A. B - A - C</label></li>
+                <li><label><input type="radio" name="q12" value="B"> B. A - B - C</label></li>
+                <li><label><input type="radio" name="q12" value="C"> C. C - B - A</label></li>
+                <li><label><input type="radio" name="q12" value="D"> D. B - C - A</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="13">
+            <div class="question-text">Câu 13:<br>A. 味道鲜美<br>B. 南方菜很有特点，特别是汤<br>C. 很多北方人都喜欢喝</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q13" value="A"> A. A - C - B</label></li>
+                <li><label><input type="radio" name="q13" value="B"> B. B - C - A</label></li>
+                <li><label><input type="radio" name="q13" value="C"> C. B - A - C</label></li>
+                <li><label><input type="radio" name="q13" value="D"> D. C - B - A</label></li>
+            </ul>
+        </div>
+
+        <!-- PHẦN 4: ĐIỀN TỪ -->
+        <h2 class="section-title">Phần 4: Chọn từ thích hợp điền vào chỗ trống</h2>
+        <div style="margin-bottom: 15px; padding: 10px; background: #e3f2fd; border-radius: 5px;">
+            <b>Các từ để chọn:</b> 民族 (mínzú) / 究竟 (jiūjìng) / 合格 (hégé) / 推迟 (tuīchí) / 登机牌 (dēngjīpái)
+        </div>
+
+        <div class="question-block" data-q="14">
+            <div class="question-text">Câu 14: 乘客，您好！我们很抱歉地通知您，由于天气原因，您乘坐的CA1864航班______起飞了。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q14" value="A"> A. 民族</label></li>
+                <li><label><input type="radio" name="q14" value="B"> B. 究竟</label></li>
+                <li><label><input type="radio" name="q14" value="C"> C. 合格</label></li>
+                <li><label><input type="radio" name="q14" value="D"> D. 推迟</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="15">
+            <div class="question-text">Câu 15: 一会儿我自己进去换______，你就不用送我了。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q15" value="A"> A. 登机牌</label></li>
+                <li><label><input type="radio" name="q15" value="B"> B. 究竟</label></li>
+                <li><label><input type="radio" name="q15" value="C"> C. 推迟</label></li>
+                <li><label><input type="radio" name="q15" value="D"> D. 合格</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="16">
+            <div class="question-text">Câu 16: 这张照片上和你干杯的那个人是少数______吗？</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q16" value="A"> A. 合格</label></li>
+                <li><label><input type="radio" name="q16" value="B"> B. 民族</label></li>
+                <li><label><input type="radio" name="q16" value="C"> C. 推迟</label></li>
+                <li><label><input type="radio" name="q16" value="D"> D. 究竟</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="17">
+            <div class="question-text">Câu 17: 上午来应聘的那个小伙子成绩很优秀，我觉得他完全______这份工作的要求。</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q17" value="A"> A. 究竟</label></li>
+                <li><label><input type="radio" name="q17" value="B"> B. 登机牌</label></li>
+                <li><label><input type="radio" name="q17" value="C"> C. 合格</label></li>
+                <li><label><input type="radio" name="q17" value="D"> D. 民族</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="18">
+            <div class="question-text">Câu 18: 人的一生中，______什么是最重要的？</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q18" value="A"> A. 究竟</label></li>
+                <li><label><input type="radio" name="q18" value="B"> B. 合格</label></li>
+                <li><label><input type="radio" name="q18" value="C"> C. 民族</label></li>
+                <li><label><input type="radio" name="q18" value="D"> D. 推迟</label></li>
+            </ul>
+        </div>
+
+        <!-- PHẦN 5: SẮP XẾP TỪ -->
+        <h2 class="section-title">Phần 5: Sắp xếp các từ sau thành một câu hoàn chỉnh</h2>
+
+        <div class="question-block" data-q="19">
+            <div class="question-text">Câu 19:</div>
+            <div class="scrambled-words">没 / 后来 / 想到 / 说 / 容易 / 起来 / 做 / 起来 / 难</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q19" value="A"> A. 后来没想到说容易起来做起来难。</label></li>
+                <li><label><input type="radio" name="q19" value="B"> B. 后来做起来难没想到说容易起来。</label></li>
+                <li><label><input type="radio" name="q19" value="C"> C. 后来没想到说起来容易做起来难。</label></li>
+                <li><label><input type="radio" name="q19" value="D"> D. 没想到后来做起来容易说起来难。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="20">
+            <div class="question-text">Câu 20:</div>
+            <div class="scrambled-words">躺在 / 有时候 / 睡着 / 草地上 / 躺着躺着 / 就 / 了</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q20" value="A"> A. 有时候躺在草地上躺着躺着就睡着了。</label></li>
+                <li><label><input type="radio" name="q20" value="B"> B. 躺在草地上有时候就睡着了躺着躺着。</label></li>
+                <li><label><input type="radio" name="q20" value="C"> C. 有时候躺着躺着就睡着了躺在草地上。</label></li>
+                <li><label><input type="radio" name="q20" value="D"> D. 草地上有时候躺在睡着了就躺着躺着。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="21">
+            <div class="question-text">Câu 21:</div>
+            <div class="scrambled-words">遇到 / 一定 / 很多 / 邻居 / 开心 / 小王 / 的 / 事 / 最近</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q21" value="A"> A. 邻居遇到小王最近一定很多开心的事。</label></li>
+                <li><label><input type="radio" name="q21" value="B"> B. 邻居小王最近一定遇到了很多开心的事。</label></li>
+                <li><label><input type="radio" name="q21" value="C"> C. 很多开心的事一定遇到了最近邻居小王。</label></li>
+                <li><label><input type="radio" name="q21" value="D"> D. 最近邻居小王遇到了很多开心的一定事。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="22">
+            <div class="question-text">Câu 22:</div>
+            <div class="scrambled-words">饭店 / 我们 / 对面 / 去 / 吃 / 的 / 烤鸭</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q22" value="A"> A. 我们对面的饭店去吃烤鸭。</label></li>
+                <li><label><input type="radio" name="q22" value="B"> B. 去对面的饭店吃烤鸭我们。</label></li>
+                <li><label><input type="radio" name="q22" value="C"> C. 我们去对面的吃烤鸭的饭店。</label></li>
+                <li><label><input type="radio" name="q22" value="D"> D. 我们去对面的饭店吃烤鸭。</label></li>
+            </ul>
+        </div>
+
+        <div class="question-block" data-q="23">
+            <div class="question-text">Câu 23:</div>
+            <div class="scrambled-words">收拾 / 行李 / 会 / 我 / 好</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q23" value="A"> A. 我收拾会好行李。</label></li>
+                <li><label><input type="radio" name="q23" value="B"> B. 我会收拾好行李。</label></li>
+                <li><label><input type="radio" name="q23" value="C"> C. 行李我会收拾好。</label></li>
+                <li><label><input type="radio" name="q23" value="D"> D. 我收拾行李会好。</label></li>
+            </ul>
+        </div>
+
+        <button type="submit" class="btn-submit">Nộp bài & Chấm điểm</button>
+    </form>
+
+    <div id="result-container">
+        <h2>KẾT QUẢ BÀI LÀM</h2>
+        <div class="score-text">Điểm của bạn: <span id="score"></span>/10</div>
+        <div class="feedback-text" id="feedback"></div>
+        <p style="margin-top: 20px; font-style: italic;">* Kéo lên trên để xem chi tiết các câu đúng (màu xanh) và câu sai (màu đỏ).</p>
+    </div>
+</div>
+
+<script>
+    // Đáp án chuẩn
+    const correctAnswers = {
+        q1: 'A', q2: 'B', q3: 'C', q4: 'B', q5: 'A', // Phần 1
+        q6: 'C', q7: 'A', q8: 'B', q9: 'B', q10: 'A', // Phần 2
+        q11: 'B', q12: 'A', q13: 'C', // Phần 3
+        q14: 'D', q15: 'A', q16: 'B', q17: 'C', q18: 'A', // Phần 4
+        q19: 'C', q20: 'A', q21: 'B', q22: 'D', q23: 'B'  // Phần 5
+    };
+
+    const totalQuestions = Object.keys(correctAnswers).length;
+
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let score = 0;
+
+        // Reset styling first
+        document.querySelectorAll('label').forEach(label => {
+            label.classList.remove('correct-answer', 'incorrect-answer');
+        });
+
+        // Loop through answers
+        for (let q in correctAnswers) {
+            const selectedOption = document.querySelector(`input[name="${q}"]:checked`);
+            const correctAnswer = correctAnswers[q];
+            
+            // Highlight the correct answer universally
+            const correctInput = document.querySelector(`input[name="${q}"][value="${correctAnswer}"]`);
+            if(correctInput) {
+                correctInput.parentElement.classList.add('correct-answer');
+            }
+
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswer) {
+                    score++;
+                } else {
+                    // Highlight the wrong choice made by user
+                    selectedOption.parentElement.classList.add('incorrect-answer');
+                }
+            }
+        }
+
+        // Calculate 10-point scale
+        const pointScale10 = ((score / totalQuestions) * 10).toFixed(1);
+        
+        // Show Results
+        const resultContainer = document.getElementById('result-container');
+        document.getElementById('score').innerText = pointScale10;
+        
+        let feedbackText = "";
+        if (pointScale10 >= 9) {
+            feedbackText = "🎉 Xuất sắc! Bạn đã nắm rất vững kiến thức Bài 20. Thầy Huân rất tự hào về bạn!";
+        } else if (pointScale10 >= 7) {
+            feedbackText = "👍 Khá tốt! Bạn đã hiểu bài, chỉ cần ôn lại một chút xíu nữa là hoàn hảo.";
+        } else if (pointScale10 >= 5) {
+            feedbackText = "📚 Đạt yêu cầu. Tuy nhiên bạn cần xem lại từ vựng và ngữ pháp Bài 20 kỹ hơn nhé.";
+        } else {
+            feedbackText = "💪 Cố gắng lên! Có vẻ bạn chưa nắm vững bài này. Hãy mở sách ra ôn tập lại phần từ vựng và ngữ pháp của thầy Huân nhé.";
+        }
+        
+        document.getElementById('feedback').innerText = feedbackText;
+        resultContainer.style.display = 'block';
+
+        // Scroll to result
+        resultContainer.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
